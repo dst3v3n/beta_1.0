@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMAN TALENT</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+</head>
+<body class="hidden">
+    <div class="centrado" id="onload">	
+		<div class="cssload-loader">HUMAN TALENT</div>
+	</div>
+    <main class="form">
+        <form action="/data" class="sub-form" method="post">
+            <div class="upper-form">
+                <div class="cabecera">
+                    <a href="/template/index.html" class="atras">
+                        <img src="/static/img/arrow-back-sharp.svg" alt="atras">
+                    </a>
+                    <h2>Formulario Registro</h2>
+                </div>
+                <aside class="btn-social">
+                    <button class="btn-facebook">
+                        <picture>
+                            <img src="/static/img/baseline-facebook.svg" alt="" width="25px" height="25px">
+                        </picture>
+                    </button>
+                    <button class="btn-gmail">
+                        <picture>
+                            <img src="/static/img/google-gmail.svg" alt="" width="20px" height="25px">
+                        </picture>
+                    </button>
+                </aside>
+                <div class="separador">
+                    <hr class="izquierda">
+                    <p>o</p>
+                    <hr class="derecha">
+                </div>
+                <div class="name">
+                    <div class="subname nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Digite su nombre" required>
+                    </div>
+                    <div class="subname apellido">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Digite sus apellidos" required>
+                    </div>
+                </div>
+                <label for="email">Correo</label><br>
+                <input type="email" name="email" placeholder="Digite su correo" required><br>
+                <label for="password">Contraseña</label><br>
+                <span class="Eye">
+                <i class="bx bx-hide"></i>
+                </span>
+                <input type="password" class="pass" name="password" placeholder="Digite su contraseña" required >
+                <br>
+                <label for="password">Repite la Contraseña</label><br>
+                <span class="Eye1">
+                <i class="bx bx-hide"></i>
+                </span>
+                <input type="password" class="pass" name="re_password" placeholder="Digite de nuevo su contraseña" required >
+                <br>
+
+                <div class="btn">
+                    <button type="submit">Registrarse</button><br>
+                </div>
+            </div>
+            <div class="bottom-form">
+                <div class="no-account">Ya tienes una cuenta?</div>
+                <a href="/template/login.html" class="login">Login</a>
+            </div>
+        </form>
+    </main>
+    <script src="/static/js/vista.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/static/js/loader.js"></script>
+</body>
+</html>
