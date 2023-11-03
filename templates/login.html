@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUMAN TALENT</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/login,css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body class="hidden">
     <div class="centrado" id="onload">	
@@ -16,7 +16,7 @@
         <form action="/inicio" class="sub-form" method="post">
             <div class="upper-form">
                 <div class="cabecera">
-                    <a href="/template/index.html" class="atras">
+                    <a href="{%url 'index'%}" class="atras">
                         <img src="/static/img/arrow-back-sharp.svg" alt="atras">
                     </a>
                     <h2>Formulario Login</h2>
@@ -53,7 +53,7 @@
             </div>
             <div class="bottom-form">
                 <div class="no-account">No tienes una cuenta?</div>
-                <a href="/template/registro.html" class="Signup">Registrarse</a>
+                <a href="{%url 'registro'%}" class="Signup">Registrarse</a>
             </div>
         </form>
     </main>

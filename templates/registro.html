@@ -16,7 +16,7 @@
         <form action="/data" class="sub-form" method="post">
             <div class="upper-form">
                 <div class="cabecera">
-                    <a href="/template/index.html" class="atras">
+                    <a href="{%url 'index'%}" class="atras">
                         <img src="/static/img/arrow-back-sharp.svg" alt="atras">
                     </a>
                     <h2>Formulario Registro</h2>
@@ -69,7 +69,7 @@
             </div>
             <div class="bottom-form">
                 <div class="no-account">Ya tienes una cuenta?</div>
-                <a href="/template/login.html" class="login">Login</a>
+                <a href="{%url 'login'%}" class="login">Login</a>
             </div>
         </form>
     </main>
