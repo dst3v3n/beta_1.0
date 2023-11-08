@@ -23,6 +23,5 @@ urlpatterns = [
     path('', views.index , name="index"),
     path('registro/', views.registro, name="registro"),
     path('login/', views.login , name="login"),
-    path('harold/', views.x , name="harold"),
     path('usuarios/' , include('usuarios.urls')),
 ]
