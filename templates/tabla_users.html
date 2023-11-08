@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Usuarios</title>
-    <link rel="stylesheet" href="../css/tabla_users.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="{%static 'css/tabla_users.css'%}" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <h1>Tabla de Usuarios</h1>
+      <h1>Tabla de Usuarios</h1>
     </header>
     <main>
-    <div class="table-container">
+      <div class="table-container">
         <table>
             <tr>
                 <th>Nombre</th>
@@ -21,21 +19,17 @@
                 <th>Email</th>
                 <th>Password</th>
             </tr>
+
+            {%for user in get_usuarios%}
             <tr>
-                <td>Laura</td>
-                <td>Rosero</td>
-                <td>usuario1@gmail.com</td>
-                <td>65478asd</td>
+              <td>{{user.nombre}}</td>
+              <td>{{user.apellido}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.password}}</td>
             </tr>
-            <tr>
-                <td>Josue</td>
-                <td>Torres</td>
-                <td>usuario2@gmailom</td>
-                <td>12364dfg</td>
-            </tr>
-            
+            {%endfor%}
         </table>
-    </div>
+      </div>
     </main>
     <footer>
         <div class="buttons" id="contactos">
@@ -59,5 +53,5 @@
             </div>	
         </div>
     </footer>
-</body>
+  </body>
 </html>
