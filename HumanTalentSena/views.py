@@ -10,3 +10,6 @@ def registro (request):
 
 def login(request):
     return render(request , 'login.html')
+
+def x(request):
+    return render(request , 'hoja_vida.html')
