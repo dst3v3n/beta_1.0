@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Usuarios</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{%static 'css/tabla_users.css'%}" rel="stylesheet" />
 </head>
 <body>
@@ -22,10 +24,10 @@
 
             {%for user in get_usuarios%}
             <tr>
-              <td>{{user.nombre}}</td>
-              <td>{{user.apellido}}</td>
-              <td>{{user.email}}</td>
-              <td>{{user.password}}</td>
+              <td>{{user.Nombre}}</td>
+              <td>{{user.Apellido}}</td>
+              <td>{{user.Email}}</td>
+              <td>{{user.Password}}</td>
             </tr>
             {%endfor%}
         </table>
