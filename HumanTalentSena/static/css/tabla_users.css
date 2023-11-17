@@ -1,0 +1,101 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nosifer', sans-serif;
+}
+body{
+	background-color: #000000;
+	height: 100% ;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+.table-container {
+    width: 100%;
+}
+
+table {
+    display: flex;
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #ddd
+}
+
+th {
+    background-color: #f2f2f2;
+    color:#000000
+}
+
+
+header {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+footer{
+    position: relative;
+    margin: 10px;
+    top: 400px;
+}
+  .buttons {
+    min-width: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+  
+   .buttons .face a:hover {
+    transform: scale(1.2);
+    background-image: radial-gradient(circle at 87.5% 12.5%, #366bdd 0,  #366bdd 100%);
+  }
+
+  .buttons .twit a:hover {
+    transform: scale(1.2);
+    background-image: radial-gradient(circle at 87.5% 12.5%, #00acee 0,  #00acee 100%);
+  }
+
+  .buttons .what a:hover {
+    transform: scale(1.2);
+    background-image: radial-gradient(circle at 87.5% 12.5%, #25D366 0,  #25D366 100%);
+  }
+
+  .buttons .yout a:hover {
+    transform: scale(1.2);
+    color:#c4302b;
+    background-image: radial-gradient(circle at 87.5% 12.5%, black 0,  black 100%);
+  }
+
+  .buttons .gith a:hover {
+    transform: scale(1.2);
+    background-image: radial-gradient(circle at 87.5% 12.5%, #171515 0,  #171515 100%);
+  }
+
+  .buttons .inst a:hover {
+    transform: scale(1.2);
+    background-image: radial-gradient(circle at 87.5% 12.5%, #0090ff 0, #008cff 6.25%, #0086ff 12.5%, #0080ff 18.75%, #4779ff 25%, #7371fa 31.25%, #9268f0 37.5%, #aa5fe5 43.75%, #be55d8 50%, #ce4bca 56.25%, #dc40ba 62.5%, #e636aa 68.75%, #ee2d9a 75%, #f32789 81.25%, #f62678 87.5%, #f72a67 93.75%, #f63157 100%);
+  }
