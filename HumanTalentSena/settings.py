@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,5 @@ STATICFILES_DIRS=['HumanTalentSena/static']
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+APPEND_SLASH = False 
+### Cuando esta en verdadero pone un shell al final de la url y cuando esta en falso, no pone la shell al final y hace redireccionamientos de url ###
