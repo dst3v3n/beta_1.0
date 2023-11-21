@@ -26,7 +26,7 @@ from.addEventListener('submit', e=>{
         entrada = true
     }
     if(pass.value.length <8){
-        alert("La Contraseña Es Muy Corta")
+        // alert("La Contraseña Es Muy Corta")
         entrada = true
     }
     if (passw.value !== pass.value) {

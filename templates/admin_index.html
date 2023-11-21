@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/estiloadmin.css' %}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="icon" type="image/x-icon" href="{% static "img/logo.ico" %}">
+	<link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 	<title>HUMAN TALENT</title>
 </head>
 
@@ -25,8 +25,9 @@
 			</div>
 			<nav class="menu">
 				<a href="{%url 'admin_index'%}">Home</a>
-				<a href="#">Usuarios</a>
-				<a href="#">empresas</a>
+				<a href="{% url 'visualizar' %}">Usuarios</a>
+				<a href="#">Empresas</a>
+				<a href="#">Administrar</a>
 			</nav>
 		</div>
 	</header>
