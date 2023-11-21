@@ -14,7 +14,7 @@
 		<div class="cssload-loader">HUMAN TALENT</div>
 	</div>
     <main class="form">
-        <form action="{% url 'datos' %}" class="sub-form" method="post"> {% csrf_token %}
+        <form action="{% url 'datos' %}" class="sub-form" id="form" method="post"> {% csrf_token %}
             <!-- {% csrf_token %} da un valor aleatorio y unico que se genera por el servidor y se almacena en el navegador del usuario. -->
             <div class="upper-form">
                 <div class="cabecera">
