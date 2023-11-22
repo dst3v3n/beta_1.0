@@ -27,3 +27,4 @@ def metodo_post (request):
 def contac (request):
     contact_form = Contact_Form ()
     return render (request , 'crispy.html' , {'form' : contact_form})
+

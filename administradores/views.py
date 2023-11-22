@@ -13,7 +13,7 @@ def visualizar_tablas (request):
         'get_usuarios' : get_usuarios
     }
     return render (request , 'tabla_users.html' , data)
-    
+
 def verificacion (request):
     if request.method == "POST":
         email = request.POST['username']
@@ -34,3 +34,9 @@ def verificacion (request):
             password = encriptar (password)
             if Email == email and passwd == password:
                 return render (request , 'index.html')
+
+def eliminarUsuario(request, id_usuario):
+    user=Usuario.objects.get(pk=id_usuario)
+    user.delete()
+    usuarios=Usuario.objects.all()
+    return render(request, "tabla_users.html",{"get_usuarios":usuarios})

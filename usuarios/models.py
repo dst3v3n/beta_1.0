@@ -9,7 +9,7 @@ class Usuario (models.Model):
 
     def __str__(self):
         return f"{self.Nombre} {self.Apellido}"
-    
+
 class User (models.Model):
     Nombre = models.CharField (max_length=50)
     Apellido = models.CharField (max_length=50)
