@@ -46,7 +46,7 @@ def eliminarUsuario(request, id_usuario):
 def editarUsuario(request,id_usuario):
     usuario=Usuario.objects.filter(id=id_usuario).first()
     form=FormularioAdmin(instance=usuario)
-    return render(request, "UsuarioEdit.html",{"form":form,"usuario":usuario})
+    return render(request, "usuarioEdit.html",{"form":form,"usuario":usuario})
 
 def actualizarUsuario(request,id_usuario):
     usuario=Usuario.objects.get(pk=id_usuario)
