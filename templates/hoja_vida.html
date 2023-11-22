@@ -48,56 +48,57 @@
     <input type="checkbox" id="chk1">
     <div id="ocultar1">
         Información personal
+        <form action="#" method="post"> {% csrf_token %}
+            <div class="row g-3">
+                
+                <div class="col">
+                    <label for="nombre1" nombre="nombre1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" nombre="nombre1" id="nombre1" placeholder="Primer Nombre" aria-label="Nombre1" requered>
+                </div>
+                
+                <div class="col">
+                    <label for="nombre2" class="form-label">Nombre</label>
+                    <input type="text" class="form-control"  nombre="nombre2" id="nombre2" placeholder="Segundo Nombre" aria-label="Nombre2" >
+                </div>
+                
+                <div class="col">
+                    <label for="apellido1" class="form-label">Apellido</label>
+                    <input type="text" class="form-control"  nombre="apellido1" id="apellido1" placeholder="Primer Apellido" aria-label="Apellido1" requered>
+                </div>
+                
+                <div class="col">
+                    <label for="apellido2" class="form-label">Apellido</label>
+                    <input type="text" class="form-control"  nombre="apellido2" id="apellido2" placeholder="Segundo Apellido" aria-label="Apellido2" >
+                </div>
 
-        <div class="row g-3">
-
-            <div class="col">
-                <label for="nombre1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre1" placeholder="Primer Nombre" aria-label="Nombre1" requered>
             </div>
+        </form>
 
-            <div class="col">
-                <label for="nombre2" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre2" placeholder="Segundo Nombre" aria-label="Nombre2" >
-            </div>
-
-            <div class="col">
-                <label for="apellido1" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido1" placeholder="Primer Apellido" aria-label="Apellido1" requered>
-            </div>
-
-            <div class="col">
-                <label for="apellido2" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido2" placeholder="Segundo Apellido" aria-label="Apellido2" >
-            </div>
-
-        </div>
-
-        <form class="row g-3">
+        {% comment %} <form class="row g-3">
 
             <div class="col-md-6">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingrese Su Correo" requered>
+                <input type="email" class="form-control"  nombre="email" id="email" placeholder="Ingrese Su Correo" requered>
             </div>
 
             <div class="col-md-6">
                 <label for="ndocumento" class="form-label">Numero de docuemnto</label>
-                <input type="Numero" class="form-control" id="ndocumento" placeholder="Ingrese Numero De Docuemnto" requered>
+                <input type="Numero" class="form-control"  nombre="ndocumento" id="ndocumento" placeholder="Ingrese Numero De Docuemnto" requered>
             </div>
 
             <div class="col-12">
                 <label for="direccion1" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion1" placeholder="cl,kr,av" requered>
+                <input type="text" class="form-control"  nombre="direccion1" id="direccion1" placeholder="cl,kr,av" requered>
             </div>
 
             <div class="col-12">
                 <label for="direccion2" class="form-label">Dirección 2</label>
-                <input type="text" class="form-control" id="direccion2" placeholder="cl,kr,av">
+                <input type="text" class="form-control"  nombre="direccion2" id="direccion2" placeholder="cl,kr,av">
             </div>
 
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Ciudad Donde habita</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="EJ:BOGOTA-BOGOTA D.C" requered>
+                <input type="text" class="form-control"  nombre="inputCity" id="inputCity" placeholder="EJ:BOGOTA-BOGOTA D.C" requered>
             </div>
 
             <div class="col-md-4">
@@ -240,12 +241,12 @@
                                 <option class="form-select">11-15 Años</option>
                             </option>
                         </select>
-                    </div>
-                    <form class="row g-3">
+                    </div>{% endcomment %}
+                    <form class="row g-3" action="{% url 'visualizar' %}" method="post"> {% csrf_token %}
                         <div class="col-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" name="hola">
+                                <label class="form-check-label" for="gridCheck" name="hola" >
                                 Verifícame
                             </label>
                         </div>
