@@ -27,14 +27,3 @@ def metodo_post (request):
 def contac (request):
     contact_form = Contact_Form ()
     return render (request , 'crispy.html' , {'form' : contact_form})
-
-def metodo_post_new (request):
-    if request.method == "POST":
-        nombre = request.POST['Nombre']
-        apellido = request.POST['Apellido']
-        fecha = request.POST['Fecha']
-        documento = request.POST['Documento']
-        User(Nombre = nombre , Apellido = apellido , Fecha = fecha , Documento = documento).save ()
-        return render(request , 'index.html')
-    else:
-        return (request , 'crispy.html')  

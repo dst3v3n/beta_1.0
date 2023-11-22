@@ -23,7 +23,7 @@ def verificacion (request):
             for user in verificacion:
                 Email = user['Email']
                 passwd = user['Password']
-            password = encriptar (password)
+            # password = encriptar (password)
             if Email == email and passwd == password:
                 return render (request , 'admin_index.html')
         else:

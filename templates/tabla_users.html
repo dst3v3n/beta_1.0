@@ -49,10 +49,12 @@
 
             {%for user in get_usuarios%}
             <tr>
-              <td>{{user.Nombre}}</td>
-              <td>{{user.Apellido}}</td>
-              <td>{{user.Email}}</td>
-              <td>{{user.Password}}</td>
+                <td>{{user.Nombre}}</td>
+                <td>{{user.Apellido}}</td>
+                <td>{{user.Email}}</td>
+                <td>{{user.Password}}</td>
+                <td><a >Editar</a></td>
+                <td><a >Eliminar</a></td>
             </tr>
             {%endfor%}
         </table>
