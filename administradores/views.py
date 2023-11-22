@@ -48,3 +48,6 @@ def actualizarUsuario(request,id_usuario):
        form.save()
        get_usuarios=Usuario.objects.all()
        return render(request,"tabla_users.html",{"get_usuarios":get_usuarios})
+            
+def admin_registra(request):
+    return render(request , 'registro.html')
