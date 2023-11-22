@@ -14,3 +14,6 @@ def visualizar_tablas (request):
 
 def registro (request):
     return render(request , 'registro.html')
+
+def  usuariosedit(request):
+    return render(request , 'usuarioEdit.html')
