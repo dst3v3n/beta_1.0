@@ -34,3 +34,6 @@ def verificacion (request):
             password = encriptar (password)
             if Email == email and passwd == password:
                 return render (request , 'index.html')
+            
+def admin_registra(request):
+    return render(request , 'registro.html')
