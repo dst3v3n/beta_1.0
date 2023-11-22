@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from . models import Usuario
-from . forms import Contact_Form
-from HumanTalentSena.static.python.encriptar import encriptar
-# Create your views here.
+from HumanTalentSena.static.python.encriptar import encriptar# Create your views here.
 
 def visualizar (request):
     get_usuarios = Usuario.objects.all()
@@ -23,8 +21,3 @@ def metodo_post (request):
         return render(request , 'login.html')
     else:
         return (request , 'registro.html')  
-
-def contac (request):
-    contact_form = Contact_Form ()
-    return render (request , 'crispy.html' , {'form' : contact_form})
-

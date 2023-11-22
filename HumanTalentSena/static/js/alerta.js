@@ -36,24 +36,4 @@ from.addEventListener('submit', e=>{
     if(!entrada){
         alert("Registrado Con Exito" )
     }
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/usuarios/views/metodo_post');
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    const data = {
-        nombre : 'juan' ,
-        apellido : 'diaz', 
-        email : 'jdss@sd.com',
-        password : 1235431,
-      };
-    xhr.send(JSON.stringify(data));
-
-    xhr.onload = () => {
-        const response = xhr.response;
-        console.log(response);
-      };
-
-
-
-
-})
+});
