@@ -16,238 +16,239 @@
         </div>
     </nav>
     <main>
-        <div class="info">
-            <p class="titulo1">Información Peresonal</p>
-            
-            <label for="nombre" class="infop" >Nombre</label>
-            <input type="text" class="inp" id="nombre" placeholder="Escriba su nombre">
-            
-            <label for="apellido" class="infop" id="ape">Apellidos</label>
-            <input type="text" class="inp" id="apellido" placeholder="Escriba sus apellidos">
-            <br>
-            <br>
-            <label for="direccion" class="infop">Direccion</label>
-            <input type="text" class="inp" id="direccion" placeholder="Escriba su direccion">
-            
-            <label for="cel" class="infop">Nºcelular</label>
-            <input type="number" class="inp1" id="cel" placeholder="Escriba su numero de celular">
-            <br>
-            <br>
-            <label for="email" class="infop">Correo</label>
-            <input type="email" class="inp" id="email" placeholder="Escriba su correo">
-            
-            <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
-            <input type="date" class="inp2" id="fechan">
-            <br>
-            <br>
-            <label for="tipod" class="infop">Tipo de documento</label>
-            <select name="tipod" id="tipod" class="inp2">
-                <option value="CC">C.C</option>
-                <option value="CE">C.E</option>
-                <option value="PAS">PAS</option>
-                <option value="TI">TI</option>
-            </select>
-            
-            <label for="ncc" class="infop" id="doc">Nº de documento</label>
-            <input type="number" class="inp1" id="ncc" placeholder="Escriba su numero de documento">
-            <br>
-            <br>
-            <label for="genero" class="infop">Genero</label>
-            <select name="genero" id="genero" class="inp2">
-                <option value="select">Seleccionar</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-                <option value="otro">Otro</option>
-            </select>
-            
-            <label for="edad" class="infop" id="ed">Edad</label>
-            <input type="number" class="inp1" id="edad" placeholder="Escriba su edad">
-            
-            <label for="civil" class="infop" id="estado">Estado civil</label>
-            <select name="civil" id="civil" class="inp2">
-                <option value="select">Seleccionar</option>
-                <option value="casado">Casado</option>
-                <option value="union">Union libre</option>
-                <option value="soltero">Soltero</option>
-            </select>
-            <br>
-            <br>
-        </div>
+        <form action="{% url 'visualizar_hoja' %}" method="post">  {% csrf_token %}
+            <div class="info">
+                <p class="titulo1">Información Peresonal</p>
+                
+                <label for="nombre" class="infop" >Nombre</label>
+                <input type="text" name="nombre" class="inp" id="nombre" placeholder="Escriba su nombre">
+                
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                <input type="text" class="inp" id="apellido" placeholder="Escriba sus apellidos">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" class="inp" id="direccion" placeholder="Escriba su direccion">
+                
+                <label for="cel" class="infop">Nºcelular</label>
+                <input type="number" class="inp1" id="cel" placeholder="Escriba su numero de celular">
+                <br>
+                <br>
+                <label for="email" class="infop">Correo</label>
+                <input type="email" class="inp" id="email" placeholder="Escriba su correo">
+                
+                <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
+                <input type="date" class="inp2" id="fechan">
+                <br>
+                <br>
+                <label for="tipod" class="infop">Tipo de documento</label>
+                <select name="tipod" id="tipod" class="inp2">
+                    <option value="CC">C.C</option>
+                    <option value="CE">C.E</option>
+                    <option value="PAS">PAS</option>
+                    <option value="TI">TI</option>
+                </select>
+                
+                <label for="ncc" class="infop" id="doc">Nº de documento</label>
+                <input type="number" class="inp1" id="ncc" placeholder="Escriba su numero de documento">
+                <br>
+                <br>
+                <label for="genero" class="infop">Genero</label>
+                <select name="genero" id="genero" class="inp2">
+                    <option value="select">Seleccionar</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                
+                <label for="edad" class="infop" id="ed">Edad</label>
+                <input type="number" class="inp1" id="edad" placeholder="Escriba su edad">
+                
+                <label for="civil" class="infop" id="estado">Estado civil</label>
+                <select name="civil" id="civil" class="inp2">
+                    <option value="select">Seleccionar</option>
+                    <option value="casado">Casado</option>
+                    <option value="union">Union libre</option>
+                    <option value="soltero">Soltero</option>
+                </select>
+                <br>
+                <br>
+            </div>
 
 
-        <div class="info">
-            <p class="titulo1">Educación</p>
-            
-                <p class="titulo2">Institucion-1</p>
+            <div class="info">
+                <p class="titulo1">Educación</p>
+                
+                    <p class="titulo2">Institucion-1</p>
 
-            <label for="titulo" class="infop">Titulo obtenido</label>
-            <input type="file" class="inp3" id="img" accept="img/jpng, img/jpg, img/png" style="display: none;" >
-            <button id="boton-seleccionar">Seleccionar imágenes</button>
-            
-            <label for="cole" class="infop" id="col">Institucion</label>
-            <input type="text" class="inp" id="cole" placeholder="Escriba su nombre de la Institucion">
-            <br>
-            <br>
-            <label for="añ" class="infop">Año de gradución</label>
-            <input type="date" class="inp2" id="añ">
-            
-            <label for="tim" class="infop" id="tie">timpo en la institucion</label>
-            <input type="number" class="inp1" id="tim" placeholder="Escriba el timpo que permanecion en la institucion">
-            <br>
-            <br>
-            <br>
-            
-            <p class="titulo2">Institucion-2</p>
-            
-            <label for="titulo" class="infop">Titulo obtenido</label>
-            <input type="file" class="inp3" id="img" accept="img/jpng, img/jpg, img/png" style="display: none;" >
-            <button id="boton-seleccionar">Seleccionar imágenes</button>
-            
-            <label for="cole" class="infop" id="col">Institucion</label>
-            <input type="text" class="inp" id="cole" placeholder="Escriba su nombre de la Institucion">
-            <br>
-            <br>
-            <label for="añ" class="infop">Año de gradución</label>
-            <input type="date" class="inp2" id="añ">
-            
-            <label for="tim" class="infop" id="tie">timpo en la institucion</label>
-            <input type="number" class="inp1" id="tim" placeholder="Escriba el timpo que permanecion en la institucion">
-            <br>
-            <br>
+                <label for="titulo" class="infop">Titulo obtenido</label>
+                <input type="file" class="inp3" id="img" accept="img/jpng, img/jpg, img/png" style="display: none;" >
+                <button id="boton-seleccionar">Seleccionar imágenes</button>
+                
+                <label for="cole" class="infop" id="col">Institucion</label>
+                <input type="text" class="inp" id="cole" placeholder="Escriba su nombre de la Institucion">
+                <br>
+                <br>
+                <label for="añ" class="infop">Año de gradución</label>
+                <input type="date" class="inp2" id="añ">
+                
+                <label for="tim" class="infop" id="tie">timpo en la institucion</label>
+                <input type="number" class="inp1" id="tim" placeholder="Escriba el timpo que permanecion en la institucion">
+                <br>
+                <br>
+                <br>
+                
+                <p class="titulo2">Institucion-2</p>
+                
+                <label for="titulo" class="infop">Titulo obtenido</label>
+                <input type="file" class="inp3" id="img" accept="img/jpng, img/jpg, img/png" style="display: none;" >
+                <button id="boton-seleccionar">Seleccionar imágenes</button>
+                
+                <label for="cole" class="infop" id="col">Institucion</label>
+                <input type="text" class="inp" id="cole" placeholder="Escriba su nombre de la Institucion">
+                <br>
+                <br>
+                <label for="añ" class="infop">Año de gradución</label>
+                <input type="date" class="inp2" id="añ">
+                
+                <label for="tim" class="infop" id="tie">timpo en la institucion</label>
+                <input type="number" class="inp1" id="tim" placeholder="Escriba el timpo que permanecion en la institucion">
+                <br>
+                <br>
 
-        </div>
-        
-        <div class="info">
-            <p class="titulo1">Experiencia laboral</p>
+            </div>
+            
+            <div class="info">
+                <p class="titulo1">Experiencia laboral</p>
 
-            <p class="titulo2">Empresa-2</p>
+                <p class="titulo2">Empresa-2</p>
 
-            <label for="emp" class="infop">Empresa</label>
-            <input type="text" class="inp" id="emp" placeholder="Escriba nombre de la empresa">
-            
-            
-            <label for="car" class="infop" id="car">Cargo</label>
-            <input type="text" class="inp" id="car" placeholder="Escriba el cargo que desempreño">
-            <br>
-            <br>
-            <label for="fechai" class="infop">Fecha de inicio</label>
-            <input type="date" class="inp2" id="fechai">
-            
-            <label for="fechaf" class="infop">Fecha de FInalización</label>
-            <input type="date" class="inp2" id="fechaf">
-            <br>
-            <br>
-            <label for="dsr" class="infop">Describa sus fuciones</label>
-            <textarea name="descripcion" id="dsr" placeholder="Ingrese una descripción larga"></textarea>
-            <br>
-            <br>
-            <br>
+                <label for="emp" class="infop">Empresa</label>
+                <input type="text" class="inp" id="emp" placeholder="Escriba nombre de la empresa">
+                
+                
+                <label for="car" class="infop" id="car">Cargo</label>
+                <input type="text" class="inp" id="car" placeholder="Escriba el cargo que desempreño">
+                <br>
+                <br>
+                <label for="fechai" class="infop">Fecha de inicio</label>
+                <input type="date" class="inp2" id="fechai">
+                
+                <label for="fechaf" class="infop">Fecha de FInalización</label>
+                <input type="date" class="inp2" id="fechaf">
+                <br>
+                <br>
+                <label for="dsr" class="infop">Describa sus fuciones</label>
+                <textarea name="descripcion" id="dsr" placeholder="Ingrese una descripción larga"></textarea>
+                <br>
+                <br>
+                <br>
 
-            <p class="titulo2">Empresa-2</p>
+                <p class="titulo2">Empresa-2</p>
 
-            <label for="emp" class="infop">Empresa</label>
-            <input type="text" class="inp" id="emp" placeholder="Escriba nombre de la empresa">
-            
-            
-            <label for="car" class="infop" id="car">Cargo</label>
-            <input type="text" class="inp" id="car" placeholder="Escriba el cargo que desempreño">
-            <br>
-            <br>
-            <label for="fechai" class="infop">Fecha de inicio</label>
-            <input type="date" class="inp2" id="fechai">
-            
-            <label for="fechaf" class="infop">Fecha de FInalización</label>
-            <input type="date" class="inp2" id="fechaf">
-            <br>
-            <br>
-            <label for="dsr" class="infop">Describa sus fuciones</label>
-            <textarea name="descripcion" id="dsr" placeholder="Ingrese una descripción larga"></textarea>
-            <br>
-            <br>
+                <label for="emp" class="infop">Empresa</label>
+                <input type="text" class="inp" id="emp" placeholder="Escriba nombre de la empresa">
+                
+                
+                <label for="car" class="infop" id="car">Cargo</label>
+                <input type="text" class="inp" id="car" placeholder="Escriba el cargo que desempreño">
+                <br>
+                <br>
+                <label for="fechai" class="infop">Fecha de inicio</label>
+                <input type="date" class="inp2" id="fechai">
+                
+                <label for="fechaf" class="infop">Fecha de FInalización</label>
+                <input type="date" class="inp2" id="fechaf">
+                <br>
+                <br>
+                <label for="dsr" class="infop">Describa sus fuciones</label>
+                <textarea name="descripcion" id="dsr" placeholder="Ingrese una descripción larga"></textarea>
+                <br>
+                <br>
 
-        </div>
-
-
-        <div class="info">
-            <p class="titulo1">Otros datos</p>
-
-            <p class="titulo2">Referencias personales</p>
-
-            <label for="nombre" class="infop" >Nombre</label>
-            <input type="text" class="inp" id="nombre" placeholder="Escriba el nombre">
-            
-            <label for="apellido" class="infop" id="ape">Apellidos</label>
-            <input type="text" class="inp" id="apellido" placeholder="Escriba los apellidos">
-            <br>
-            <br>
-            <label for="direccion" class="infop">Direccion</label>
-            <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion">
-            
-            <label for="cel" class="infop">Nºcelular</label>
-            <input type="number" class="inp1" id="cel" placeholder="Escriba el numero de celular">
-            <br>
-            <br>
-            <br>
-            <label for="nombre" class="infop" >Nombre</label>
-            <input type="text" class="inp" id="nombre" placeholder="Escriba el nombre">
-            
-            <label for="apellido" class="infop" id="ape">Apellidos</label>
-            <input type="text" class="inp" id="apellido" placeholder="Escriba los apellidos">
-            <br>
-            <br>
-            <label for="direccion" class="infop">Direccion</label>
-            <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion">
-            
-            <label for="cel" class="infop">Nºcelular</label>
-            <input type="number" class="inp1" id="cel" placeholder="Escriba el numero de celular">
-            <br>
-            <br>
-            <p class="titulo2">Referencias empresariales</p>
-
-            <label for="empr" class="infop" >Empresa</label>
-            <input type="text" class="inp" id="empr" placeholder="Escriba el nombre de la empresa">
-            
-            <label for="nombref" class="infop" id="ape">Nombre jefe</label>
-            <input type="text" class="inp" id="nombref" placeholder="Escriba el nombre de su jefe inmediato">
-            <br>
-            <br>
-            <label for="direccion" class="infop">Direccion</label>
-            <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion de la empresa">
-            
-            <label for="tel" class="infop" id="telf">Nºtelefono</label>
-            <input type="number" class="inp1" id="tel" placeholder="Escriba su numero de telefonoi de la empresa">
-            <br>
-            <br>
-            <br>
-
-            <label for="empr" class="infop" >Empresa</label>
-            <input type="text" class="inp" id="empr" placeholder="Escriba el nombre de la empresa">
-            
-            <label for="nombref" class="infop" id="ape">Nombre jefe</label>
-            <input type="text" class="inp" id="nombref" placeholder="Escriba el nombre de su jefe inmediato">
-            <br>
-            <br>
-            <label for="direccion" class="infop">Direccion</label>
-            <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion de la empresa">
-            
-            <label for="tel" class="infop" id="telf">Nºtelefono</label>
-            <input type="number" class="inp1" id="tel" placeholder="Escriba su numero de telefonoi de la empresa">
-            <br>
-            <br> 
-
-        </div>
+            </div>
 
 
-        <div class="info">
-            <p class="titulo1">Informacion adicional</p>
-            <br>
-            <textarea name="infoa" id="infoa" placeholder="En este campo puede agregar informacion adicional a la solicitada"></textarea>
+            <div class="info">
+                <p class="titulo1">Otros datos</p>
 
-        </div>
+                <p class="titulo2">Referencias personales</p>
+
+                <label for="nombre" class="infop" >Nombre</label>
+                <input type="text" class="inp" id="nombre" placeholder="Escriba el nombre">
+                
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                <input type="text" class="inp" id="apellido" placeholder="Escriba los apellidos">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion">
+                
+                <label for="cel" class="infop">Nºcelular</label>
+                <input type="number" class="inp1" id="cel" placeholder="Escriba el numero de celular">
+                <br>
+                <br>
+                <br>
+                <label for="nombre" class="infop" >Nombre</label>
+                <input type="text" class="inp" id="nombre" placeholder="Escriba el nombre">
+                
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                <input type="text" class="inp" id="apellido" placeholder="Escriba los apellidos">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion">
+                
+                <label for="cel" class="infop">Nºcelular</label>
+                <input type="number" class="inp1" id="cel" placeholder="Escriba el numero de celular">
+                <br>
+                <br>
+                <p class="titulo2">Referencias empresariales</p>
+
+                <label for="empr" class="infop" >Empresa</label>
+                <input type="text" class="inp" id="empr" placeholder="Escriba el nombre de la empresa">
+                
+                <label for="nombref" class="infop" id="ape">Nombre jefe</label>
+                <input type="text" class="inp" id="nombref" placeholder="Escriba el nombre de su jefe inmediato">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion de la empresa">
+                
+                <label for="tel" class="infop" id="telf">Nºtelefono</label>
+                <input type="number" class="inp1" id="tel" placeholder="Escriba su numero de telefonoi de la empresa">
+                <br>
+                <br>
+                <br>
+
+                <label for="empr" class="infop" >Empresa</label>
+                <input type="text" class="inp" id="empr" placeholder="Escriba el nombre de la empresa">
+                
+                <label for="nombref" class="infop" id="ape">Nombre jefe</label>
+                <input type="text" class="inp" id="nombref" placeholder="Escriba el nombre de su jefe inmediato">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" class="inp" id="direccion" placeholder="Escriba la direccion de la empresa">
+                
+                <label for="tel" class="infop" id="telf">Nºtelefono</label>
+                <input type="number" class="inp1" id="tel" placeholder="Escriba su numero de telefonoi de la empresa">
+                <br>
+                <br> 
+
+            </div>
 
 
-        <div class="info1">
-            <input type="submit" name="submit" value="Guardar hoja de vida">
-        </div>
+            <div class="info">
+                <p class="titulo1">Informacion adicional</p>
+                <br>
+                <textarea name="infoa" id="infoa" placeholder="En este campo puede agregar informacion adicional a la solicitada"></textarea>
+            </div>
+
+            <div class="info1">
+                <!-- <button type="submit">Guardar hoja de vida</button> -->
+                <input type="submit" name="submit" value="Guardar hoja de vida">
+            </div>
+        </form>
     </main>
 </body>

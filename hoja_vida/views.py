@@ -7,6 +7,6 @@ def hoja_vida (request):
     return render (request , 'hoja_vida.html')
 
 def visualizar (request):
-    hola = request.POST['hola']
+    hola = request.POST['nombre']
     return HttpResponse (request.POST)
     
