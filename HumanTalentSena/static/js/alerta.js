@@ -34,6 +34,6 @@ from.addEventListener('submit', e=>{
         entrada = true
     }
     if(!entrada){
-        alert("Registrado Con Exito")
+        alert("Registrado Con Exito" )
     }
 })
