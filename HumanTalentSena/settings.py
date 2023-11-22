@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'administradores.apps.AdministradoresConfig',
+    'hoja_vida.apps.HojaVidaConfig',
 ]
 
 MIDDLEWARE = [

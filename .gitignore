@@ -1,6 +1,9 @@
 HumanTalentSena/__pycache__
+HumanTalentSena/static/python/__pycache__
 env
 usuarios/__pycache__
 usuarios/migrations/__pycache__
-administrador/__pycache__
-administrador/migrations/__pycache__
+hoja_vida/__pycache__
+hoja_vida/migrations/__pycache__
+administradores/__pycache__
+administradores/migrations/__pycache__

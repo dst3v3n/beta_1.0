@@ -1,13 +1,7 @@
 from django import forms
-from .models import User
-
-class DateInput(forms.DateInput):
-    input_type = 'date'
+from .models import Usuario
 
 class Contact_Form (forms.ModelForm):
     class Meta:
-        model = User
+        model = Usuario
         fields = '__all__'
-        widgets = {
-            'Fecha': DateInput()
-        }
