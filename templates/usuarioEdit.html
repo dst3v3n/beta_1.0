@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{%static 'css/useredit.css'%}" rel="stylesheet" />
 </head>
+
 <body class="hidden">
     <main class="form">
-        <form action="{% url 'actualizar_usuario' usuario.id%}" class="sub-form" id="form" method="post"> {% csrf_token %}
+        <form action="{% url 'actualizar_usuario' usuario.id%}" class="sub-form" id="form" method="post"> {%csrf_token%}
             <!-- {% csrf_token %} da un valor aleatorio y unico que se genera por el servidor y se almacena en el navegador del usuario. -->
             <div class="upper-form">
                 <div class="cabecera">
@@ -19,7 +21,7 @@
                     </a>
                     <h2>Editar Usuario</h2>
                 </div>
-                
+
                 <div class="separador">
                     <hr class="izquierda">
                     <p>o</p>
@@ -40,15 +42,16 @@
                 <br>
                 <label for="password">Contraseña</label><br>
                 <span class="Eye">
-                <i class="bx bx-hide"></i>
+                    <i class="bx bx-hide"></i>
                 </span>
                 {{form.Password}}
                 <br>
                 <label for="password">Repite la Contraseña</label><br>
                 <span class="Eye1">
-                <i class="bx bx-hide"></i>
+                    <i class="bx bx-hide"></i>
                 </span>
-                {{form.Password}}
+                <input type="password" class="pass" id="pass" name="re_password"
+                    placeholder="Digite de nuevo su contraseña">
                 <br>
 
                 <div class="btn">

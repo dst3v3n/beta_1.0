@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from usuarios.models import Usuario
 from .models import Admin
 from HumanTalentSena.static.python.encriptar import encriptar
@@ -49,12 +50,16 @@ def editarUsuario(request,id_usuario):
     return render(request, "usuarioEdit.html",{"form":form,"usuario":usuario})
 
 def actualizarUsuario(request,id_usuario):
+    password = encriptar(request.POST["Password"])
+    repassword = encriptar (request.POST["re_password"])
     usuario=Usuario.objects.get(pk=id_usuario)
     form=FormularioAdmin(request.POST,instance=usuario)
     if form.is_valid():
-       form.save()
-       get_usuarios=Usuario.objects.all()
-       return render(request,"tabla_users.html",{"get_usuarios":get_usuarios})
+        usuario.encriptacion (password)
+        if password == repassword:
+            form.save()
+            get_usuarios=Usuario.objects.all()
+            return render(request,"tabla_users.html",{"get_usuarios":get_usuarios})
             
 def admin_registra(request):
     return render(request , 'registro_admin.html')

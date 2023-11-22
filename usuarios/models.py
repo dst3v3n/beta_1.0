@@ -1,4 +1,5 @@
 from django.db import models
+from HumanTalentSena.static.python.encriptar import encriptar
 
 # Create your models here.
 class Usuario (models.Model):
@@ -9,6 +10,11 @@ class Usuario (models.Model):
 
     def __str__(self):
         return f"{self.Nombre} {self.Apellido}"
+    
+    def encriptacion (self , password:str):
+        self.Password = password
+        return self.Password
+
 
 class User (models.Model):
     Nombre = models.CharField (max_length=50)
