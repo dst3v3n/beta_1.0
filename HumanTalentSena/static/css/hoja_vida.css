@@ -73,6 +73,14 @@ body{
     border-bottom: 2px #fff solid;
 }
 
+.info .titulo2 {
+    color: #fff;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+    margin: 20px 0px;
+}
+
 .info .infop{
     color: #fff;
     font-weight: bolder;
@@ -136,4 +144,108 @@ body{
 
 #estado{
     margin-left: 10px;
+}
+
+#col{
+    margin-left: 166px;
+}
+
+
+#boton-seleccionar {
+    background-color: #fff;
+    color: #404040;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+#boton-seleccionar:hover {
+    background-color: #404040;
+    color: #fff;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+}
+
+#dsr{
+    width: 35%;
+    height: 100px;
+    display: block;
+    padding:4px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-right: 20px;
+}
+#telf{
+    margin-left: 10px;
+}
+
+#infoa{
+    width: 50%;
+    height: 50%;
+    padding:6px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-left: 25%;
+}
+
+.info1{
+    width: 25%;
+    height: auto;
+    background-color:#1D405C ;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+input[type="submit"] {
+    background-color: #404040;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    margin-left: 31%;
+    cursor: pointer;
+
+    &:hover {
+    background-color: #404040;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+    &:active {
+    background-color: green;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    }
 }
