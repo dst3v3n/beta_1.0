@@ -55,8 +55,12 @@
               <td>{{user.Apellido}}</td>
               <td>{{user.Email}}</td>
               <td>{{user.Password}}</td>
-              <th> <button class="btn">Editar</button> </th>
-              <th> <button class="btn">Eliminar</button> </th>
+              <th> <button class="btn" type="submit">
+                <a href="{% url 'editar_usuario' user.id %}">Editar</a>
+            </button> </th>
+            <th> <button class="btn">Eliminar
+
+            </button> </th>
             </tr>
             {%endfor%}
         </table>
