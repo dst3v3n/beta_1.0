@@ -4,267 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human-Talent-SENA</title>
-    <link rel="stylesheet" href="{%static 'css/hojavida.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
-    
-
-    <style>
-        [id^="ocultar"] {
-            display: none;
-        }
-
-        [id^="chk"]:checked + [id^="ocultar"] {
-            display: block;
-        }
-
-        body{
-            background-color: #404040;
-            overflow-x: hidden;
-        }
-
-        
-    </style>
-</head>
+    <link rel="stylesheet" href="{%static 'css/hoja_vida.css'%}">
 <body>
-    
-
-    <div class="capa"></div>
-    <section>
-        <a class="logo" href="{%url 'index'%}">
-            <img src="/static/img/logo.png" alt="logo" width="130px">
-        </a>
-        <h1>FORMULARIO HOJA DE VIDA</h1>
-    </section>
-    <div class="intro">
-        <h2>INICIO DE FORMULARIO</h2>
-    </div>
-
-    <div class="intro2">
-        <h2>SELECCIONE EL PASO 1 PARA EMPEZAR EL FORMULARIO DE HOJA DE VIDA Y PUEDA DELIGENCIARLO</h2>
-    </div>
-    
-    <!-- PASO 1 -->
-    <button><label for="chk1"><h1>PASO 1</h1></label></button>
-    <input type="checkbox" id="chk1">
-    <div id="ocultar1">
-        Información personal
-        <form action="#" method="post"> {% csrf_token %}
-            <div class="row g-3">
-                
-                <div class="col">
-                    <label for="nombre1" nombre="nombre1" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" nombre="nombre1" id="nombre1" placeholder="Primer Nombre" aria-label="Nombre1" requered>
-                </div>
-                
-                <div class="col">
-                    <label for="nombre2" class="form-label">Nombre</label>
-                    <input type="text" class="form-control"  nombre="nombre2" id="nombre2" placeholder="Segundo Nombre" aria-label="Nombre2" >
-                </div>
-                
-                <div class="col">
-                    <label for="apellido1" class="form-label">Apellido</label>
-                    <input type="text" class="form-control"  nombre="apellido1" id="apellido1" placeholder="Primer Apellido" aria-label="Apellido1" requered>
-                </div>
-                
-                <div class="col">
-                    <label for="apellido2" class="form-label">Apellido</label>
-                    <input type="text" class="form-control"  nombre="apellido2" id="apellido2" placeholder="Segundo Apellido" aria-label="Apellido2" >
-                </div>
-
-            </div>
-        </form>
-
-        {% comment %} <form class="row g-3">
-
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control"  nombre="email" id="email" placeholder="Ingrese Su Correo" requered>
-            </div>
-
-            <div class="col-md-6">
-                <label for="ndocumento" class="form-label">Numero de docuemnto</label>
-                <input type="Numero" class="form-control"  nombre="ndocumento" id="ndocumento" placeholder="Ingrese Numero De Docuemnto" requered>
-            </div>
-
-            <div class="col-12">
-                <label for="direccion1" class="form-label">Dirección</label>
-                <input type="text" class="form-control"  nombre="direccion1" id="direccion1" placeholder="cl,kr,av" requered>
-            </div>
-
-            <div class="col-12">
-                <label for="direccion2" class="form-label">Dirección 2</label>
-                <input type="text" class="form-control"  nombre="direccion2" id="direccion2" placeholder="cl,kr,av">
-            </div>
-
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Ciudad Donde habita</label>
-                <input type="text" class="form-control"  nombre="inputCity" id="inputCity" placeholder="EJ:BOGOTA-BOGOTA D.C" requered>
-            </div>
-
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">Estado</label>
-                <select id="inputState" class="form-select">
-                    <option>
-                        <option selected>Elige...</option>
-                        <option class="form-select">soltero</option>
-                        <option class="form-select">casado</option>
-                        <option class="form-select">union libre</option>
-                    </option>
-                </select>
-
-            </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Código postal</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-
-        </form>
-        
-        <!-- PASO 2 dentro de PASO 1 -->
-        <button><label for="chk2"><h1>PASO 2</h1></label></button>
-        <input type="checkbox" id="chk2">
-        <div id="ocultar2">
-            Experiencia
-
-            <div class="row g-3">
-
-                <div class="col">
-                    <label for="nempresa" class="form-label">Ultima Empresa Dode Lavoro</label>
-                    <input type="text" class="form-control" id="nempresa" placeholder="Nombre De La Empresa" >
-                </div>
-
-                <div class="col2">
-                    <label for="jefe" class="form-label">Nombre Del Jefe Inmediato</label>
-                    <input type="text" class="form-control" id="jefe" placeholder="Jefe Inmediato" >
-                </div>
-
-                <form class="row g-3">
-
-                    <div class="col-md-6">
-                        <label for="funciones" class="form-label">Fuenciones Desarrolladas</label>
-                        <input type="text" class="form-control" id="funciones" placeholder="¿Cuales Fueron Sus Fuenciones En La Empresa?">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="direccion3" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="direccion3" placeholder="Dirreccion De La Empresa">
-                        <label for="inputState" class="form-label">Tiempo Laborado</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Seleccione El Tiempo Laborado</option>
-                                <option class="form-select">0-6 Meses</option>
-                                <option class="form-select">6-12 Meses</option>
-                                <option class="form-select">1-4 Años</option>
-                                <option class="form-select">Mas De 4 Años</option>
-                            </option>
-                        </select>
-                    </div>
-
-                </form>
-
-            </div>
-            
-            <!-- PASO 3 dentro de PASO 2 -->
-            <button><label for="chk3"><h1>PASO 3</h1></label></button>
-            <input type="checkbox" id="chk3">
-            <div id="ocultar3">
-                Información Académica
-
-                <div class="row g-3">
-
-                    <div class="col1">
-                        <label for="instituci" class="form-label">Instituci</label>
-                        <input type="text" class="form-control" id="instituci" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-
-                    <div class="col2">
-                        <label for="instituci" class="form-label">Instituci</label>
-                        <input type="text" class="form-control" id="instituci" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-
-                    <div class="col3">
-                        <label for="instituci" class="form-label">Instituci</label>
-                        <input type="text" class="form-control" id="instituci" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    Idiomas
-
-                    <div class="col1">
-                        <label for="instituci" class="form-label">Instituci</label>
-                        <input type="text" class="form-control" id="instituci" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>{% endcomment %}
-                    <form class="row g-3" action="{% url 'visualizar' %}" method="post"> {% csrf_token %}
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck" name="hola">
-                                <label class="form-check-label" for="gridCheck" name="hola" >
-                                Verifícame
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-
-                    </form>
-
-                </div>
-
+    <nav>
+        <div class="barra">
+            <div class="content">
+                <p class="p1">HUMAN TALENT</p>
+                <p class="p2">Hoja De Vida</p>
             </div>
 
         </div>
-
-    </div>
-
+    </nav>
+    <main>
+        <div class="info">
+            <p class="titulo1">Informaciòn Peresonal</p>
+            <label for="nombre" class="infop" >Nombre</label>
+            <input type="text" class="inp" id="nombre" placeholder="Escriba su nombre">
+            
+            <label for="apellido" class="infop" id="ape">Apellidos</label>
+            <input type="text" class="inp" id="apellido" placeholder="Escriba sus apellidos">
+            <br>
+            <br>
+            <label for="direccion" class="infop">Direccion</label>
+            <input type="text" class="inp" id="direccion" placeholder="Escriba su direccion">
+            
+            <label for="cel" class="infop">Nºcelular</label>
+            <input type="number" class="inp1" id="cel" placeholder="Escriba su numero de celular">
+            <br>
+            <br>
+            <label for="email" class="infop">Correo</label>
+            <input type="email" class="inp" id="email" placeholder="Escriba su correo">
+            
+            <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
+            <input type="date" class="inp2" id="fechan" placeholder="Fecha de nacimiento">
+            <br>
+            <br>
+            <label for="tipod" class="infop">Tipo de documento</label>
+            <select name="tipod" id="tipod" class="inp2">
+                <option value="CC">C.C</option>
+                <option value="CE">C.E</option>
+                <option value="PAS">PAS</option>
+                <option value="TI">TI</option>
+            </select>
+            
+            <label for="ncc" class="infop" id="doc">Nº de documento</label>
+            <input type="number" class="inp1" id="ncc" placeholder="Escriba su numero de documento">
+            <br>
+            <br>
+            <label for="genero" class="infop">Genero</label>
+            <select name="genero" id="genero" class="inp2">
+                <option value="select">Seleccionar</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="edad" class="infop" id="ed">Edad</label>
+            <input type="number" class="inp1" id="edad" placeholder="Escriba su edad">
+            
+            <label for="civil" class="infop" id="estado">Estado civil</label>
+            <select name="civil" id="civil" class="inp2">
+                <option value="select">Seleccionar</option>
+                <option value="casado">Casado</option>
+                <option value="union">Union libre</option>
+                <option value="soltero">Soltero</option>
+            </select>
+        </div>
+    </main>
 </body>
-</html>

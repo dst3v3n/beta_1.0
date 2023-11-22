@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Tilt+Prism&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Akshar', sans-serif;
+}
+
+body{
+    background-color: #404040;
+}
+
+.barra{
+    width: 100%;
+    height: 300px;
+    background-color: #1D405C;
+    transform: skewY(-4deg );
+    -webkit-transform: skewY(-4deg );
+    -moz-transform: skewY(-4deg );
+    -ms-transform: skewY(-4deg );
+    -o-transform: skewY(-4deg );
+}
+
+.barra .content{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    margin: 6%;
+}
+
+.barra .content .p1{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 65px;
+    transform: skewY(5deg );
+    -webkit-transform: skewY(5deg );
+    -moz-transform: skewY(5deg );
+    -ms-transform: skewY(5deg );
+    -o-transform: skewY(5deg );
+    
+}
+.barra .content .p2{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 35px;
+    transform: skewY(5deg );
+    -webkit-transform: skewY(5deg );
+    -moz-transform: skewY(5deg );
+    -ms-transform: skewY(5deg );
+    -o-transform: skewY(5deg );
+    
+}
+
+.info{
+    width: 70%;
+    height: auto;
+    background-color:#1D405C ;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.info .titulo1 {
+    color: #fff;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+    border-bottom: 2px #fff solid;
+}
+
+.info .infop{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 25px;
+    display: inline;
+    margin-top:15px;
+    margin-right: 10px;
+}
+
+.info .inp{
+    width: 35%;
+    display: inline;
+    padding:4px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-right: 20px;
+}
+
+.info .inp1{
+    width: 30%;
+    display: inline;
+    padding:4px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-right: 20px;
+}
+
+.info .inp2{
+    width: 20%;
+    display: inline;
+    padding:4px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-right: 20px;
+}
+
+#ape{
+    margin-left: 17px;
+}
+
+#fecha{
+    margin-left: 32px;
+}
+
+#doc{
+    margin-left: 90px;
+}
+
+#ed{
+    margin-left: 10px;
+}
+
+#estado{
+    margin-left: 10px;
+}
