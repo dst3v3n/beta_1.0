@@ -70,3 +70,7 @@ def metodo_post (request):
         return render(request , 'admin_index.html')
     else:
         return (request , 'registro_admin.html')  
+
+
+def  usuariosedit(request):
+    return render(request , 'usuarioEdit.html')
