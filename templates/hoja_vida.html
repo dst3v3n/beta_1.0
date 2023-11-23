@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human-Talent-SENA</title>
     <link rel="stylesheet" href="{%static 'css/hoja_vida.css'%}">
-<body>
+    <link rel="icon" type="image/x-icon" href="{% static "img/logo.ico" %}">
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">	
+        <div class="cssload-loader">HUMAN TALENT</div>
+    </div>
+    
+    <div class="capa"></div>
+    
     <nav>
         <div class="barra">
             <div class="content">
-                <p class="p1">HUMAN TALENT</p>
-                <p class="p2">Hoja De Vida</p>
+                <a href="{%url 'index'%}">
+                <p class="p1">HUMAN TALENT <br> Hoja De Vida</p>    
+                </a>
             </div>
 
         </div>
@@ -245,10 +255,15 @@
                 <textarea name="infoa" id="infoa" placeholder="En este campo puede agregar informacion adicional a la solicitada"></textarea>
             </div>
 
+
             <div class="info1">
                 <!-- <button type="submit">Guardar hoja de vida</button> -->
                 <input type="submit" name="submit" value="Guardar hoja de vida">
             </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/static/js/loader.js"></script>
+
         </form>
     </main>
 </body>

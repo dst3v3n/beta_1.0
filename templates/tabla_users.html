@@ -7,6 +7,7 @@
     <title>Tabla de Usuarios</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{%static 'css/tabla_users.css'%}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
 <body>
     <header>
@@ -58,8 +59,8 @@
               <th> <button class="btn-retornos" type="submit">
                 <a href="{% url 'editar_usuario' user.id %}">Editar</a>
             </button> </th>
-            <th> <button class="btn-retorn">Eliminar
-
+            <th> <button class="btn-retorn" type="submit">
+                <a href="{% url 'eliminar_usuario' user.id %}">Eliminar</a>
             </button> </th>
             </tr>
             {%endfor%}
