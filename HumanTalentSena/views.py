@@ -14,3 +14,6 @@ def hoja_vida(request):
 
 def admministrar(request):
     return (request , admin.site.urls)
+
+def persil_user(request):
+    return render(request , 'perfiluser.html')
