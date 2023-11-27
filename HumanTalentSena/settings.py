@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
+    'buscador.apps.buscadorconfig',
 ]
 
 MIDDLEWARE = [
