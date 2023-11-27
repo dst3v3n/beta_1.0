@@ -27,5 +27,4 @@ urlpatterns = [
     path('usuarios/' , include('usuarios.urls')),
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
-    path('perfil/' , views.persil_user , name="perfil_user"),
 ]

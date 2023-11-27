@@ -1,28 +1,34 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . models import Informacion_Person
-from . forms import Form_Info_Person
+from . forms import Form_Info_Person , Form_educacion , Form_Empresa , Form_Refe_Person , Form_Refe_Empresarial
 
 # Create your views here.
 
 def hoja_vida (request):
     form_info = Form_Info_Person ()
-    return render (request , 'hoja_vida.html' , {'form' : form_info})
+    form_educacion = Form_educacion ()
+    form_empresa = Form_Empresa ()
+    form_refe_person = Form_Refe_Person ()
+    form_refe_empre = Form_Refe_Empresarial ()
+    return render (request , 'hoja_vida.html' , {'form_info' : form_info ,
+                                                 'form_edu' : form_educacion,
+                                                 'form_empresa' : form_empresa,
+                                                 'form_person' : form_refe_person,
+                                                 'form_empresarial' : form_refe_empre})
 
-def post (request):
+def guardar_info (request):
     if request.method == 'POST':
-        nombre = request.POST ['nombre']
-        apellido = request.POST ['apellido']
-        direccion = request.POST ['direccion']
-        cel = request.POST ['cel']
-        email = request.POST ['email']
-        fnacimiento = request.POST ['fnacimiento']
-        tipod = request.POST ['tipod']
-        ndoc = request.POST ['ndoc']
-        genero = request.POST ['genero']
-        edad = request.POST ['edad']
-        civil = request.POST ['civil']
-        usuario = Informacion_Person (nombre , apellido , direccion , cel , email , fnacimiento , tipod , ndoc , genero , edad , civil)
-        usuario.save ()
-    return render (request , 'hoja_vida.html' , {'usuario' : usuario})
-    # return HttpResponse (f"{request.POST['civil']}")
+        usuario = Form_Info_Person(request.POST)
+        if usuario.is_valid():
+            usuario.save()
+            usuario=Form_Info_Person()
+            form_info = Form_Info_Person ()
+            form_educacion = Form_educacion ()
+            form_empresa = Form_Empresa ()
+            form_refe_person = Form_Refe_Person ()
+            form_refe_empre = Form_Refe_Empresarial ()
+    return render (request , 'hoja_vida.html' , {'form_info' : form_info ,
+                                                 'form_edu' : form_educacion,
+                                                 'form_empresa' : form_empresa,
+                                                 'form_person' : form_refe_person,
+                                                 'form_empresarial' : form_refe_empre})
