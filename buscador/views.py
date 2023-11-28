@@ -5,7 +5,9 @@ from django.shortcuts import render
 
 from django.contrib.auth.decorators import login
 from django.contrib.auth import authenticate, login
-from usuarios.models import Usuario
+
+from buscador.models import Filtro
+
 
 
 def filtrar_filtro(request):
@@ -18,9 +20,9 @@ def filtrar_filtro(request):
     return render(request, 'buscador.html')
 
 def visualizar_filtro (request):
-    get_usuarios = Usuario.objects.all()
+    get_filtro = Filtro.objects.all()
     data = {
-        'get_usuarios': get_usuarios
+        'get_filtro': get_filtro
     }
 
     return render(request , 'buscador.html' , data)
