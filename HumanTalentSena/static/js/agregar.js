@@ -17,7 +17,7 @@ btnAgregar.addEventListener('click', (event) => {
     <input type="text" name="Nombre_Instituto${total++}" class="inp" maxlength="50" required="" id="id_Nombre_Instituto">
     <br>
     <br>
-    <label for="añ" class="infop">Año de gradución</label> 
+    <label for="añ" class="infop">Año de gradución</label>
     <input type="date" name="Ano_graduacion${total++}" class="inp2" required="" id="id_Ano_graduacion">
     <label for="tim" class="infop" id="tie">timpo en la institucion</label>
     <input type="number" name="Tiempo${total++}" class="inp1" required="" id="id_Tiempo">
@@ -55,5 +55,3 @@ function actualizarContador() {
     forms[i].children.innerHTML = total++;
   }
 };
-
-

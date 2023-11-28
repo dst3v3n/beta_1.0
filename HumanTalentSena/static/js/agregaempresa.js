@@ -59,5 +59,3 @@ function actualizarContador() {
     forms[i].children.innerHTML = total++;
   }
 };
-
-

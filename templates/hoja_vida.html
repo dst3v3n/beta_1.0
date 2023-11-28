@@ -27,7 +27,7 @@
     </nav>
     <main>
             <div class="info">
-                <form action="{% url 'indexe' %}" method="post">
+                <form action="{% url 'save_info' %}" method="post">
                     {% csrf_token %}
                     <p class="titulo1">Información Personal</p>
 
@@ -68,7 +68,6 @@
 
                     <label for="civil" class="infop" id="estado">Estado civil</label>
                     {{form_info.Civil}}
-                    {{form_info.Usuario}}
                     <br>
                     <br>
                     <p class="titulo2">No olvide guardar sus datos </p>
@@ -79,7 +78,8 @@
 
             <div class="info" >
                 <div id="edu">
-                <form action="#"> {% csrf_token %}
+                <form action="{% url 'save_educacion' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
                     <p class="titulo1">Educación</p>
 
                     <p class="titulo2">Institucion</p>
@@ -103,7 +103,7 @@
                     <div>
                         <p class="titulo2">No olvide guardar sus datos </p>
                             <a href="#" class="titulo1" id="agregar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
-                            <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                            <button type="submit">Guardar</button>
                     </div>
                 </form>
             </div>
