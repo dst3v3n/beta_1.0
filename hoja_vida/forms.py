@@ -7,7 +7,7 @@ class Date (forms.DateInput):
 class Form_Info_Person (forms.ModelForm):
     class Meta:
         model = Informacion_Person
-        fields = '__all__'
+        fields = ['Nombre' , 'Apellido' , 'Direccion' , 'Celular' , 'Email' , 'Fecha' , 'Tipod' , 'N_documento' , 'Genero' , 'Edad' , 'Civil']
         widgets = {
             'Nombre': forms.TextInput(attrs={'class': 'inp', }),
             'Apellido': forms.TextInput(attrs={'class': 'inp'}),
@@ -25,7 +25,7 @@ class Form_Info_Person (forms.ModelForm):
 class Form_educacion (forms.ModelForm):
     class Meta:
         model = Educacion
-        fields = '__all__'
+        fields = ['Archivo' , 'Nombre_Instituto' , 'Ano_graduacion' , 'Tiempo']
         widgets = {
             'Archivo' : forms.FileInput (attrs={'class': 'inp3',
                                                 'accept' : '.pdf',
