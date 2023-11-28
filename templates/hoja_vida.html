@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -85,7 +86,7 @@
                     <p class="titulo2">Institucion</p>
 
                     <label for="titulo" class="infop">Titulo obtenido</label>
-                    {{form_edu.Archivo}}
+                    {{form_edu.Archivo }}
 
                     <label for="cole" class="infop" id="col">Institución</label>
                     {{form_edu.Nombre_Instituto}}
@@ -234,8 +235,68 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="/static/js/loader.js"></script>
-        <script src="/static/js/agregar.js"></script>
+        <!-- <script src="/static/js/agregar.js"></script> -->
         <script src="/static/js/agregaempresa.js"></script>
+        <script>
+            const contenedor = document.querySelector('#edu');
+            const btnAgregar = document.querySelector('#agregar');
+
+            // Counter variable
+            let total = 1;
+
+            // Function to add new form
+            btnAgregar.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const newForm = document.createElement('form action="{% url "save_educacion" %}" method="post" enctype="multipart/form-data"');
+            newForm.innerHTML = `
+                <p class="titulo2">Institución</p>
+                <label for="titulo" class="infop">Titulo obtenido</label>
+                {{form_edu_in.Archivo }}
+                <label for="cole" class="infop" id="col">Institución</label>
+                {{form_edu_in.Nombre_Instituto}}
+                <br>
+                <br>
+                <label for="añ" class="infop">Año de gradución</label>
+                {{form_edu_in.Ano_graduacion}}
+                <label for="tim" class="infop" id="tie">timpo en la institucion</label>
+                {{form_edu_in.Tiempo}}
+                <br>
+                <br>
+                <br>
+                <button onclick="eliminar(this)" style="
+                background-color: red;
+                border-color: black;
+                border-radius: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                ">Eliminar</button>
+            `;
+
+            contenedor.appendChild(newForm);
+            });
+
+            // Function to remove form
+            function eliminar(element) {
+            const parentNode = element.parentNode;
+            contenedor.removeChild(parentNode);
+            actualizarContador();
+            };
+
+            // Function to update counter
+            function actualizarContador() {
+            const forms = contenedor.children;
+            total = 1;
+
+            for (let i = 0; i < forms.length; i++) {
+                forms[i].children.innerHTML = total++;
+            }
+            };
+
+        </script>
 
         </form>
     </main>

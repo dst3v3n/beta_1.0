@@ -1,5 +1,6 @@
 from django import forms
 from . models import Informacion_Person , Educacion , Empresa , Refe_personales , Refe_empresarial
+from random import randint
 
 class Date (forms.DateInput):
     input_type = 'date'
@@ -24,6 +25,7 @@ class Form_Info_Person (forms.ModelForm):
 
 class Form_educacion (forms.ModelForm):
     class Meta:
+        numero = randint(1 , 10)
         model = Educacion
         fields = ['Archivo' , 'Nombre_Instituto' , 'Ano_graduacion' , 'Tiempo']
         widgets = {
