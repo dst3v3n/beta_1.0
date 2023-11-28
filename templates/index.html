@@ -14,7 +14,7 @@
 <body class="hidden">
 	<div class="centrado" id="onload">
 		<div class="cssload-loader">HUMAN TALENT</div>
-</div>
+	</div>
 	<header>
 		<div class="container">
         {% if barra %}
@@ -56,20 +56,18 @@
 {% endif %}
 
 <main>
-    {% if barra %}
-        <section class="section">
-            <div class="vertical">
-                <div class="user">
-                    <a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
-                </div>
-                <div class="icon">
-                    <a href="#" class="fa fa-share"></a>
-                    <a href="#" class="fa fa-send"></a>
-                    <a href="#" class="fa fa-bookmark"></a>
-                </div>
-            </div>
-        </section>
-    {% endif %}
+	<section class="section">
+		<div class="vertical">
+			<div class="user">
+				<a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
+			</div>
+			<div class="icon">
+				<a href="#" class="fa fa-share"></a>
+				<a href="{%url 'busqueda'%}" class="fa fa-search"></a>
+				<a href="#" class="fa fa-bookmark"></a>
+			</div>
+		</div>
+	</section>
 	<section class="centro">
 			<img src="/static/img/logo.png" alt="" class="imagen">
 		<div class="busqueda">
