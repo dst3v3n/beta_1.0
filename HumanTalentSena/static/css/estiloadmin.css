@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Tilt+Prism&display=swap');
 *{
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: 'Times New Roman', Times, serif, sans-serif;
+		font-family: 'Akshar', sans-serif;
 	}
 body{
 		background-color: #404040;
