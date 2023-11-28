@@ -17,50 +17,59 @@
 </div>
 	<header>
 		<div class="container">
+        {% if barra %}
 		<div class="btn-menu">
 			<label for="btn-menu">☰</label>
 		</div>
+        {% endif %}
 			<div class="logo">
 				<h1>HUMAN TALENT</h1>
 			</div>
 			<nav class="menu">
-				<a href="{%url 'login'%}">login</a>
-				<a href="{%url 'registro'%}">Registrate</a>
+                {% if boton %}
+				    <a href="{%url 'login'%}">login</a>
+                    <a href="{%url 'registro'%}">Registrate</a>
+                {% endif %}
+                {% if barra %}
 				<a href="#">Ofertas</a>
+                {% endif %}
 				<a href="#contactos">Contacto</a>
 			</nav>
 		</div>
 	</header>
 	<div class="capa"></div>
-
-<input type="checkbox" id="btn-menu">
-<div class="container-menu">
-	<div class="cont-menu">
-		<nav>
-			<a href="{%url 'perfil_user'%}">Perfil</a>
-			<a href="#">Empresas</a>
-			<a href="{%url 'index_hoja'%}">Editar hoja de vida</a>
-			<a href="#">Ver hoja de vida</a>
-			<a href="#">Ofertas guardadas</a>
-			<a href="#">Cerrar sesion</a>
-		</nav>
-		<label for="btn-menu">✖️</label>
-	</div>
-</div>
+{% if barra %}
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="{%url 'perfil_user'%}">Perfil</a>
+                <a href="#">Empresas</a>
+                <a href="{%url 'index_hoja'%}">Editar hoja de vida</a>
+                <a href="{% url 'visualizar_hoja' %}">Ver hoja de vida</a>
+                <a href="#">Ofertas guardadas</a>
+                <a href="{% url 'cerrar' %}">Cerrar sesion</a>
+            </nav>
+            <label for="btn-menu">✖️</label>
+        </div>
+    </div>
+{% endif %}
 
 <main>
-	<section class="section">
-		<div class="vertical">
-			<div class="user">
-				<a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
-			</div>
-			<div class="icon">
-				<a href="#" class="fa fa-share"></a>
-				<a href="#" class="fa fa-send"></a>
-				<a href="#" class="fa fa-bookmark"></a>
-			</div>
-		</div>
-	</section>
+    {% if barra %}
+        <section class="section">
+            <div class="vertical">
+                <div class="user">
+                    <a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
+                </div>
+                <div class="icon">
+                    <a href="#" class="fa fa-share"></a>
+                    <a href="#" class="fa fa-send"></a>
+                    <a href="#" class="fa fa-bookmark"></a>
+                </div>
+            </div>
+        </section>
+    {% endif %}
 	<section class="centro">
 			<img src="/static/img/logo.png" alt="" class="imagen">
 		<div class="busqueda">
