@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoja de vida</title>
     <link rel="stylesheet" href="{%static 'css/hoja_vida.css'%}">
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static "img/logo.ico" %}">
 </head>
 
 <body class="hidden">
@@ -27,8 +27,7 @@
     </nav>
     <main>
             <div class="info">
-                <form action="{% url 'indexe' %}" method="post">
-                    {% csrf_token %}
+                <form action="{% url 'indexe' %}" method="post"> {% csrf_token %}
                     <p class="titulo1">Información Personal</p>
 
                     <label for="nombre" class="infop" >Nombre</label>
@@ -68,18 +67,14 @@
 
                     <label for="civil" class="infop" id="estado">Estado civil</label>
                     {{form_info.Civil}}
-                    {{form_info.Usuario}}
                     <br>
                     <br>
-                    <p class="titulo2">No olvide guardar sus datos </p>
-                    <button type="submit">Guardar</button>
                 </form>
             </div>
 
 
             <div class="info">
-                <form action="#">
-                    {% csrf_token %}
+                <form action="#"> {% csrf_token %}
                     <p class="titulo1">Educación</p>
 
                     <p class="titulo2">Institucion</p>
@@ -99,11 +94,6 @@
                     <br>
                     <br>
                     <br>
-
-                    <p class="titulo2">No olvide guardar sus datos </p>
-                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
-                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
-                    <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
                 </form>
             </div>
 
@@ -131,10 +121,6 @@
                 <br>
                 <br>
                 <br>
-                <p class="titulo2">No olvide guardar sus datos </p>
-                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
-                <a href="#" class="titulo1" id="agregar" style="border: 3px solid #fff; border-radius:20px; padding:5px ;  ">Agregar</a>
-                <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
             </div>
 
 
@@ -210,8 +196,6 @@
                 <br>
                 <br>
                 <br>
-                <p class="titulo2">No olvide guardar sus datos </p>
-                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ;">Guardar</a>
             </div>
 
 
@@ -221,8 +205,6 @@
                 {{form_person.Inforamcion_adi}}
                 <br>
                 <br>
-                <p class="titulo2">No olvide guardar sus datos </p>
-                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ;">Guardar</a>
             </div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

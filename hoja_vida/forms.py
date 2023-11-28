@@ -9,7 +9,7 @@ class Form_Info_Person (forms.ModelForm):
         model = Informacion_Person
         fields = '__all__'
         widgets = {
-            'Nombre': forms.TextInput(attrs={'class': 'inp'}),
+            'Nombre': forms.TextInput(attrs={'class': 'inp', }),
             'Apellido': forms.TextInput(attrs={'class': 'inp'}),
             'Direccion': forms.TextInput(attrs={'class': 'inp'}),
             'Celular' : forms.NumberInput (attrs={'class': 'inp1'}),
@@ -57,6 +57,7 @@ class Form_Refe_Person (forms.ModelForm):
             'Apellido_person' : forms.TextInput (attrs={'class' : 'inp'}),
             'Direccion' : forms.TextInput (attrs={'class' : 'inp'}),
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1'}),
+            'Inforamcion_adi' : forms.Textarea (attrs= {'id' : 'infoa'}),
         }
 
 class Form_Refe_Empresarial (forms.ModelForm):

@@ -9,5 +9,8 @@ class FormularioAdmin(forms.ModelForm):
         model=Usuario
         fields='__all__'
         widgets = {
-            'Password': PassInput(attrs={'placeholder': 'Ingrese su contraseña, con un mínimo de 8 caracteres.'}),
+            'Password': PassInput(attrs={'placeholder': 'Ingrese su contraseña, con un mínimo de 8 caracteres.',
+                                         'id' : 'passw',
+                                         'class' : 'pass'
+                                         })
         }
