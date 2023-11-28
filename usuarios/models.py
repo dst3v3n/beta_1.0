@@ -9,8 +9,8 @@ class Usuario (models.Model):
     Password = models.CharField (max_length=50 , blank=False , null=False)
 
     def __str__(self):
-        return f"{self.Nombre} {self.Apellido}"
-    
+        return f"{self.id}"
+
     def encriptacion (self , password:str):
         self.Password = password
         return self.Password

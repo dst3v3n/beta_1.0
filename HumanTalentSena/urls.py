@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.index , name="index"),
     path('registro/', views.registro, name="registro"),
     path('login/', views.login , name="login"),
+    path('busqueda/', views.busqueda , name="busqueda"),
     path('usuarios/' , include('usuarios.urls')),
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
