@@ -162,7 +162,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #022859;
+    background-color: #1D405C;
     height: 120px;
     position: relative;
 }
@@ -258,10 +258,10 @@ body {
 
 .search input:focus {
     outline: 2px solid #469adb; 
-}
+}   
 
 .enlaces {
-    background-color: #022859;  
+    background-color: #1D405C;  
     width: 100vw;
     height: 65px;
     display: flex;  
@@ -295,7 +295,7 @@ body {
 
 .btn-postu {
      color: #f2f2f2;
-     background-color: #022859;
+     background-color: #1D405C;
      border: none;
      width: 110px;
      height: 50px;
@@ -311,9 +311,9 @@ body {
 }
 
 .btn-postu:hover {
-    background-color: #f1f1f1;
+    background-color: #022859;
     transition: 0.2s;
-    color: #000;
+    color: #fff;
     border: 2px solid #022859; 
 }
 
