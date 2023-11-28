@@ -2,7 +2,7 @@ from django.db import models
 from usuarios.models import Usuario
 
 class Perfil(models.Model):
-    usuario = models.OneToOneField(Usuario)
+    usuario = models.ForeignKey(Usuario ,  null=True ,on_delete=models.CASCADE)
     direccion = models.CharField(max_length=255, blank=True, null=True)
     telefono = models.CharField(max_length=20, blank=True, null=True)
     trabajo = models.CharField(max_length=100, blank=True, null=True)

@@ -55,7 +55,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Empresa',
+            name='Empresa'
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('Nombre_empresa', models.CharField(max_length=50)),
