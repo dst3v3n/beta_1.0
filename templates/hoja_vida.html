@@ -74,8 +74,9 @@
                 </form>
             </div>
 
-
-            <div class="info">
+            
+            <div class="info" >
+                <div id="edu">
                 <form action="#"> {% csrf_token %}
                     <p class="titulo1">Educación</p>
 
@@ -96,43 +97,49 @@
                     <br>
                     <br>
                     <br>
-
-                    <p class="titulo2">No olvide guardar sus datos </p>
-                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
-                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
-                    <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
+                </div>
+                    <div>
+                        <p class="titulo2">No olvide guardar sus datos </p>
+                            <a href="#" class="titulo1" id="agregar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
+                            <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                    </div>
                 </form>
-            </div>
+            </div> 
+            <div class="info" >
+                <div id="edu1">
+                    <p class="titulo1">Experiencia laboral</p>
 
-            <div class="info">
-                <p class="titulo1">Experiencia laboral</p>
+                    <p class="titulo2">Empresa</p>
 
-                <p class="titulo2">Empresa</p>
+                    <label for="emp" class="infop">Empresa</label>
+                    {{form_empresa.Nombre_empresa}}
 
-                <label for="emp" class="infop">Empresa</label>
-                {{form_empresa.Nombre_empresa}}
+                    <label for="car" class="infop" id="car">Cargo</label>
+                    {{form_empresa.Cargo}}
+                    <br>
+                    <br>
+                    <label for="fechai" class="infop">Fecha de inicio</label>
+                    {{form_empresa.Fecha_Inicio}}
 
-                <label for="car" class="infop" id="car">Cargo</label>
-                {{form_empresa.Cargo}}
-                <br>
-                <br>
-                <label for="fechai" class="infop">Fecha de inicio</label>
-                {{form_empresa.Fecha_Inicio}}
+                    <label for="fechaf" class="infop">Fecha de FInalización</label>
+                    {{form_empresa.Fecha_Finalizacion}}
+                    <br>
+                    <br>
+                    <label for="dsr" class="infop">Describa sus fuciones</label>
+                    {{form_empresa.Funciones}}
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                    <div>
+                        <p class="titulo2">No olvide guardar sus datos </p>
+                            <a href="#" class="titulo1" id="agregar1" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
+                            <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                    </div>
+            </div> 
+            
 
-                <label for="fechaf" class="infop">Fecha de FInalización</label>
-                {{form_empresa.Fecha_Finalizacion}}
-                <br>
-                <br>
-                <label for="dsr" class="infop">Describa sus fuciones</label>
-                {{form_empresa.Funciones}}
-                <br>
-                <br>
-                <br>
-                <p class="titulo2">No olvide guardar sus datos </p>
-                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
-                <a href="#" class="titulo1" id="agregar" style="border: 3px solid #fff; border-radius:20px; padding:5px ;  ">Agregar</a>
-                <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
-            </div>
+            
 
 
             <div class="info">
@@ -224,6 +231,8 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="/static/js/loader.js"></script>
+        <script src="/static/js/agregar.js"></script>
+        <script src="/static/js/agregaempresa.js"></script>
 
         </form>
     </main>
