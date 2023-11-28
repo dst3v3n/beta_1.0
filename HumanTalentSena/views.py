@@ -1,6 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.contrib import admin
 def index (request):
     return render(request , 'index.html')
 
@@ -9,3 +8,6 @@ def registro (request):
 
 def login(request):
     return render(request , 'login.html')
+
+def admministrar(request):
+    return (request , admin.site.urls)

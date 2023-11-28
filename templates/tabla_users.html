@@ -7,12 +7,37 @@
     <title>Tabla de Usuarios</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{%static 'css/tabla_users.css'%}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
 <body>
     <header>
-      <h1>Tabla de Usuarios</h1>
+    <h1>Tabla de Usuarios</h1>
     </header>
+
+    <div class="capa"></div>
+
+    <nav>
+    <button class="btn-retorno" type="submit"> 
+        <a href="{%url 'registro' %}">Nuevo Usuario</a>
+    </button>
+    </nav>
+
+    
+    <!-- Tab panes -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+    </div>
+    
+    <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+    <script>
+        var triggerEl = document.querySelector('#navId a')
+        bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+    </script>
+    
     <main>
       <div class="table-container">
         <table>
@@ -21,6 +46,8 @@
                 <th>Apellido</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
 
             {%for user in get_usuarios%}
@@ -29,6 +56,12 @@
               <td>{{user.Apellido}}</td>
               <td>{{user.Email}}</td>
               <td>{{user.Password}}</td>
+              <th> <button class="btn-retornos" type="submit">
+                <a href="{% url 'editar_usuario' user.id %}">Editar</a>
+            </button> </th>
+            <th> <button class="btn-retorn" type="submit">
+                <a href="{% url 'eliminar_usuario' user.id %}">Eliminar</a>
+            </button> </th>
             </tr>
             {%endfor%}
         </table>

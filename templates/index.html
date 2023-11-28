@@ -1,4 +1,4 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/stilo.css' %}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="icon" type="image/x-icon" href="{% static "img/logo.ico" %}">
+	<link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 	<title>HUMAN TALENT</title>
 </head>
 
 
 <body class="hidden">
-	<div class="centrado" id="onload">	
+	<div class="centrado" id="onload">
 		<div class="cssload-loader">HUMAN TALENT</div>
 </div>
 	<header>
@@ -37,8 +37,10 @@
 <div class="container-menu">
 	<div class="cont-menu">
 		<nav>
-			<a href="#">Perfil</a>
+			<a href="{%url 'perfil_user'%}">Perfil</a>
 			<a href="#">Empresas</a>
+			<a href="{%url 'index_hoja'%}">Editar hoja de vida</a>
+			<a href="#">Ver hoja de vida</a>
 			<a href="#">Ofertas guardadas</a>
 			<a href="#">Cerrar sesion</a>
 		</nav>
@@ -50,7 +52,7 @@
 	<section class="section">
 		<div class="vertical">
 			<div class="user">
-				<a href="{%url 'new'%}" class="fa fa-user"></a>
+				<a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
 			</div>
 			<div class="icon">
 				<a href="#" class="fa fa-share"></a>
@@ -86,7 +88,7 @@
 		</div>
 		<div class="inst">
 			<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-		</div>	
+		</div>
 	</div>
 </footer>
 

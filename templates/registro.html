@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUMAN TALENT</title>
+    <title>Registro</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
     <link rel="stylesheet" href="{% static 'css/registro.css' %}">
@@ -14,7 +14,7 @@
 		<div class="cssload-loader">HUMAN TALENT</div>
 	</div>
     <main class="form">
-        <form action="{% url 'datos' %}" class="sub-form" method="post"> {% csrf_token %}
+        <form action="{% url 'datos' %}" class="sub-form" id="form" method="post"> {% csrf_token %}
             <!-- {% csrf_token %} da un valor aleatorio y unico que se genera por el servidor y se almacena en el navegador del usuario. -->
             <div class="upper-form">
                 <div class="cabecera">
@@ -57,7 +57,7 @@
                 <span class="Eye">
                 <i class="bx bx-hide"></i>
                 </span>
-                <input type="password" class="pass" id="passw" name="password" placeholder="Digite su contraseña"  >
+                <input type="password" class="pass" id="passw" name="password" placeholder="Ingrese su contraseña, con un mínimo de 8 caracteres."  >
                 <br>
                 <label for="password">Repite la Contraseña</label><br>
                 <span class="Eye1">
@@ -79,7 +79,7 @@
     <script src="/static/js/vista.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/static/js/loader.js"></script>
-    <script src="/static/js/alerta.js"></script>
+    <!-- <script src="/static/js/alerta.js"></script> -->
     
 </body>
 </html>

@@ -1,227 +1,230 @@
-{% load static %} 
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human-Talent-SENA</title>
-    <link rel="stylesheet" href="{%static 'css/hojavida.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
-    
-
-    <style>
-        [id^="ocultar"] {
-            display: none;
-        }
-
-        [id^="chk"]:checked + [id^="ocultar"] {
-            display: block;
-        }
-    </style>
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="{%static 'css/hoja_vida.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static "img/logo.ico" %}">
 </head>
-<body>
-    <section>
-        <a class="logo" href="/index.html">
-            <img src="/img/logo.svg" alt="logo" width="130px">
-        </a>
-        <h1>FORMULARIO HOJA DE VIDA</h1>
-    </section>
-    <div class="intro">
-        <h2>INICIO DE FORMULARIO</h2>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="cssload-loader">HUMAN TALENT</div>
     </div>
 
-    <div class="intro2">
-        <h2>SELECCIONE EL PASO PARA EMPEZAR EL FORMULARIO DE HOJA DE VIDA Y PUEDA DELIGENCIARLO</h2>
-    </div>
-    
-    <!-- PASO 1 -->
-    <button><label for="chk1"><h1>PASO 1</h1></label></button>
-    <input type="checkbox" id="chk1">
-    <div id="ocultar1">
-        Información personal
-        <div class="row g-3">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+    <div class="capa"></div>
+
+    <nav>
+        <div class="barra">
+            <div class="content">
+                <a href="{%url 'index'%}">
+                <p class="p1">HUMAN TALENT <br> Hoja De Vida</p>
+                </a>
             </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-            </div>
+
         </div>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Dirección 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">Estado</label>
-                <select id="inputState" class="form-select">
-                    <option>
-                        <option selected>Elige...</option>
-                        <option class="form-select">soltero</option>
-                        <option class="form-select">casado</option>
-                        <option class="form-select">union libre</option>
-                    </option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Código postal</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Verifícame
-                    </label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-        </form>
-        
-        <!-- PASO 2 dentro de PASO 1 -->
-        <button><label for="chk2"><h1>PASO 2</h1></label></button>
-        <input type="checkbox" id="chk2">
-        <div id="ocultar2">
-            Experiencia
-            <div class="row g-3">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Nombre De La Empresa" aria-label="Nombre">
-                </div>
-                <div class="col2">
-                    <input type="text" class="form-control" placeholder="Jefe inmediato" aria-label="Nombre">
-                </div>
-                <form class="row g-3">
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        <label for="inputState" class="form-label">Tiempo Laborado</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-4 Años</option>
-                                <option class="form-select">Mas De 4 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    <div class="col-13">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Verifícame
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
+    </nav>
+    <main>
+            <div class="info">
+                <form action="{% url 'indexe' %}" method="post"> {% csrf_token %}
+                    <p class="titulo1">Información Personal</p>
+
+                    <label for="nombre" class="infop" >Nombre</label>
+                    {{form_info.Nombre}}
+
+                    <label for="apellido" class="infop" id="ape">Apellidos</label>
+                    {{form_info.Apellido}}
+                    <br>
+                    <br>
+                    <label for="direccion" class="infop">Direccion</label>
+                    {{form_info.Direccion}}
+
+                    <label for="cel" class="infop">Nºcelular</label>
+                    {{form_info.Celular}}
+                    <br>
+                    <br>
+                    <label for="email" class="infop">Correo</label>
+                    {{form_info.Email}}
+
+                    <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
+                    {{form_info.Fecha}}
+                    <br>
+                    <br>
+                    <label for="tpod" class="infop">Tipo de documento</label>
+                    {{form_info.Tipod}}
+
+
+                    <label for="ncc" class="infop" id="doc">Nº de documento</label>
+                    {{form_info.N_documento}}
+                    <br>
+                    <br>
+                    <label for="genero" class="infop">Genero</label>
+                    {{form_info.Genero}}
+
+                    <label for="edad" class="infop" id="ed">Edad</label>
+                    {{form_info.Edad}}
+
+                    <label for="civil" class="infop" id="estado">Estado civil</label>
+                    {{form_info.Civil}}
+                    <br>
+                    <br>
+                    <p class="titulo2">No olvide guardar sus datos </p>
+                    <button type="submit">Guardar</button>
                 </form>
             </div>
-            
-            <!-- PASO 3 dentro de PASO 2 -->
-            <button><label for="chk3"><h1>PASO 3</h1></label></button>
-            <input type="checkbox" id="chk3">
-            <div id="ocultar3">
-                Información Académica
-                <div class="row g-3">
-                    <div class="col1">
-                        <input type="text" class="form-control" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    <div class="col2">
-                        <input type="text" class="form-control" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    <div class="col3">
-                        <input type="text" class="form-control" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    Idiomas
-                    <div class="col1">
-                        <input type="text" class="form-control" placeholder="Nombre De La Institución" aria-label="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Título Obtenido" aria-label="Título Obtenido">
-                        <label for="inputState" class="form-label">Duración</label>
-                        <select id="inputState" class="form-select">
-                            <option>
-                                <option selected>Elige...</option>
-                                <option class="form-select">0-12 Meses</option>
-                                <option class="form-select">1-11 Años</option>
-                                <option class="form-select">11-15 Años</option>
-                            </option>
-                        </select>
-                    </div>
-                    <form class="row g-3">
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Verifícame
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </form>
-                </div>
+
+
+            <div class="info">
+                <form action="#"> {% csrf_token %}
+                    <p class="titulo1">Educación</p>
+
+                    <p class="titulo2">Institucion</p>
+
+                    <label for="titulo" class="infop">Titulo obtenido</label>
+                    {{form_edu.Archivo}}
+
+                    <label for="cole" class="infop" id="col">Institución</label>
+                    {{form_edu.Nombre_Instituto}}
+                    <br>
+                    <br>
+                    <label for="añ" class="infop">Año de gradución</label>
+                    {{form_edu.Ano_graduacion}}
+
+                    <label for="tim" class="infop" id="tie">timpo en la institucion</label>
+                    {{form_edu.Tiempo}}
+                    <br>
+                    <br>
+                    <br>
+
+                    <p class="titulo2">No olvide guardar sus datos </p>
+                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
+                    <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                    <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
+                </form>
             </div>
-        </div>
-    </div>
+
+            <div class="info">
+                <p class="titulo1">Experiencia laboral</p>
+
+                <p class="titulo2">Empresa</p>
+
+                <label for="emp" class="infop">Empresa</label>
+                {{form_empresa.Nombre_empresa}}
+
+                <label for="car" class="infop" id="car">Cargo</label>
+                {{form_empresa.Cargo}}
+                <br>
+                <br>
+                <label for="fechai" class="infop">Fecha de inicio</label>
+                {{form_empresa.Fecha_Inicio}}
+
+                <label for="fechaf" class="infop">Fecha de FInalización</label>
+                {{form_empresa.Fecha_Finalizacion}}
+                <br>
+                <br>
+                <label for="dsr" class="infop">Describa sus fuciones</label>
+                {{form_empresa.Funciones}}
+                <br>
+                <br>
+                <br>
+                <p class="titulo2">No olvide guardar sus datos </p>
+                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                <a href="#" class="titulo1" id="agregar" style="border: 3px solid #fff; border-radius:20px; padding:5px ;  ">Agregar</a>
+                <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
+            </div>
+
+
+            <div class="info">
+                <p class="titulo1">Otros datos</p>
+
+                <p class="titulo2">Referencias personales</p>
+
+                <label for="nombre" class="infop" >Nombre</label>
+                {{form_person.Nombre_person}}
+
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                {{form_person.Apellido_person}}
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                {{form_person.Direccion}}
+
+                <label for="cel" class="infop">Nºcelular</label>
+                {{form_person.N_celular}}
+                <br>
+                <br>
+                <br>
+                <p class="titulo2">Referencias personales</p>
+
+                <label for="nombre" class="infop" >Nombre</label>
+                {{form_person.Nombre_person}}
+
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                {{form_person.Apellido_person}}
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                {{form_person.Direccion}}
+
+                <label for="cel" class="infop">Nºcelular</label>
+                {{form_person.N_celular}}
+                <br>
+                <br>
+                <br>
+                <p class="titulo2">Referencias empresariales</p>
+
+                <label for="empr" class="infop" >Empresa</label>
+                {{form_empresarial.Nombre_Empresa}}
+
+                <label for="nombref" class="infop" id="ape">Nombre jefe</label>
+                {{form_empresarial.Nombre_Jefe}}
+
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                {{form_empresarial.Direccion}}
+
+                <label for="tel" class="infop" id="telf">Nºtelefono</label>
+                {{form_empresarial.N_celular}}
+                <br>
+                <br>
+                <br>
+
+                <label for="empr" class="infop" >Empresa</label>
+                {{form_empresarial.Nombre_Empresa}}
+
+                <label for="nombref" class="infop" id="ape">Nombre jefe</label>
+                {{form_empresarial.Nombre_Jefe}}
+
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                {{form_empresarial.Direccion}}
+
+                <label for="tel" class="infop" id="telf">Nºtelefono</label>
+                {{form_empresarial.N_celular}}
+                <br>
+                <br>
+                <br>
+                <p class="titulo2">No olvide guardar sus datos </p>
+                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ;">Guardar</a>
+            </div>
+
+
+            <div class="info">
+                <p class="titulo1">Informacion adicional</p>
+                <br>
+                <textarea name="infoa" id="infoa" placeholder="En este campo puede agregar informacion adicional a la solicitada"></textarea>
+                <br>
+                <br>
+                <p class="titulo2">No olvide guardar sus datos </p>
+                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ;">Guardar</a>
+            </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="/static/js/loader.js"></script>
+
+        </form>
+    </main>
 </body>
-</html>

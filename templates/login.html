@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUMAN TALENT</title>
+    <title>Inicio de sesión </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
@@ -14,7 +14,7 @@
 		<div class="cssload-loader">HUMAN TALENT</div>
 	</div>
     <main class="form">
-        <form action="/inicio" class="sub-form" method="post">
+        <form action="{% url 'verificacion' %}" class="sub-form" method="post">  {% csrf_token %}
             <div class="upper-form">
                 <div class="cabecera">
                     <a href="{%url 'index'%}" class="atras">
