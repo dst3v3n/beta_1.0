@@ -27,51 +27,63 @@
     </nav>
     <main>
             <div class="info">
-                <form action="{% url 'index' %}" method="post"> {% csrf_token %}
-                    <p class="titulo1">Información Personal</p>
-
-                    <label for="nombre" class="infop" >Nombre</label>
-                    {{form_info.Nombre}}
-
-                    <label for="apellido" class="infop" id="ape">Apellidos</label>
-                    {{form_info.Apellido}}
-                    <br>
-                    <br>
-                    <label for="direccion" class="infop">Direccion</label>
-                    {{form_info.Direccion}}
-
-                    <label for="cel" class="infop">Nºcelular</label>
-                    {{form_info.Celular}}
-                    <br>
-                    <br>
-                    <label for="email" class="infop">Correo</label>
-                    {{form_info.Email}}
-
-                    <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
-                    {{form_info.Fecha}}
-                    <br>
-                    <br>
-                    <label for="tpod" class="infop">Tipo de documento</label>
-                    {{form_info.Tipod}}
-
-
-                    <label for="ncc" class="infop" id="doc">Nº de documento</label>
-                    {{form_info.N_documento}}
-                    <br>
-                    <br>
-                    <label for="genero" class="infop">Genero</label>
-                    {{form_info.Genero}}
-
-                    <label for="edad" class="infop" id="ed">Edad</label>
-                    {{form_info.Edad}}
-
-                    <label for="civil" class="infop" id="estado">Estado civil</label>
-                    {{form_info.Civil}}
-                    <br>
-                    <br>
-                    <p class="titulo2">No olvide guardar sus datos </p>
-                    <button type="submit">Guardar</button>
-                </form>
+                <p class="titulo1">Información Peresonal</p>
+                
+                <label for="nombre" class="infop" >Nombre</label>
+                <input type="text" name="nombre" class="inp" id="nombre" placeholder="Escriba su nombre">
+                
+                <label for="apellido" class="infop" id="ape">Apellidos</label>
+                <input type="text" name="apellido" class="inp" id="apellido" placeholder="Escriba sus apellidos">
+                <br>
+                <br>
+                <label for="direccion" class="infop">Direccion</label>
+                <input type="text" name="direccion" class="inp" id="direccion" placeholder="Escriba su direccion">
+                
+                <label for="cel" class="infop">Nºcelular</label>
+                <input type="number" name="cel" class="inp1" id="cel" placeholder="Escriba su numero de celular">
+                <br>
+                <br>
+                <label for="email" class="infop">Correo</label>
+                <input type="email" name="email" class="inp" id="email" placeholder="Escriba su correo">
+                
+                <label for="fechan" class="infop" id="fecha">fecha de nacimiento</label>
+                <input type="date" name="fnacimiento" class="inp2" id="fechan">
+                <br>
+                <br>
+                <label for="tipod" class="infop">Tipo de documento</label>
+                <select name="tipod" id="tipod" class="inp2">
+                    <option value="CC">C.C</option>
+                    <option value="CE">C.E</option>
+                    <option value="PAS">PAS</option>
+                    <option value="TI">TI</option>
+                </select>
+                
+                <label for="ncc" class="infop" id="doc">Nº de documento</label>
+                <input type="number" name="ndoc" class="inp1" id="ncc" placeholder="Escriba su numero de documento">
+                <br>
+                <br>
+                <label for="genero" class="infop">Genero</label>
+                <select name="genero" id="genero" class="inp2">
+                    <option value="select">Seleccionar</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                
+                <label for="edad" class="infop" id="ed">Edad</label>
+                <input type="number" name="edad" class="inp1" id="edad" placeholder="Escriba su edad">
+                
+                <label for="civil" class="infop" id="estado">Estado civil</label>
+                <select name="civil" id="civil" class="inp2">
+                    <option value="select">Seleccionar</option>
+                    <option value="casado">Casado</option>
+                    <option value="union">Union libre</option>
+                    <option value="soltero">Soltero</option>
+                </select>
+                <br>
+                <br>
+                <p class="titulo2">No olvide guardar sus datos </p>
+                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ;">Guardar</a>
             </div>
 
             
@@ -111,32 +123,32 @@
 
                     <p class="titulo2">Empresa</p>
 
-                    <label for="emp" class="infop">Empresa</label>
-                    {{form_empresa.Nombre_empresa}}
+                <label for="emp" class="infop">Empresa</label>
+                <input type="text" name="emp" class="inp" id="emp" placeholder="Escriba nombre de la empresa">
+                
+                
+                <label for="car" class="infop" id="car">Cargo</label>
+                <input type="text" name="car" id="car" placeholder="Escriba el cargo que desempreño">
+                <br>
+                <br>
+                <label for="fechai" class="infop">Fecha de inicio</label>
+                <input type="date" name="fini" class="inp2" id="fechai">
+                
+                <label for="fechaf" class="infop">Fecha de FInalización</label>
+                <input type="date" name="ffin" class="inp2" id="fechaf">
+                <br>
+                <br>
+                <label for="dsr" class="infop">Describa sus fuciones</label>
+                <textarea name="descripcion" id="dsr" placeholder="Ingrese una descripción larga"></textarea>
+                <br>
+                <br>
+                <br>
+                <p class="titulo2">No olvide guardar sus datos </p>
+                <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
+                <a href="#" class="titulo1" id="agregar" style="border: 3px solid #fff; border-radius:20px; padding:5px ;  ">Agregar</a>
+                <a href="#" class="titulo1" id="eliminar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Eliminar</a>
+            </div>
 
-                    <label for="car" class="infop" id="car">Cargo</label>
-                    {{form_empresa.Cargo}}
-                    <br>
-                    <br>
-                    <label for="fechai" class="infop">Fecha de inicio</label>
-                    {{form_empresa.Fecha_Inicio}}
-
-                    <label for="fechaf" class="infop">Fecha de FInalización</label>
-                    {{form_empresa.Fecha_Finalizacion}}
-                    <br>
-                    <br>
-                    <label for="dsr" class="infop">Describa sus fuciones</label>
-                    {{form_empresa.Funciones}}
-                    <br>
-                    <br>
-                    <br>
-                </div>
-                    <div>
-                        <p class="titulo2">No olvide guardar sus datos </p>
-                            <a href="#" class="titulo1" id="agregar1" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Agregar</a>
-                            <a href="#" class="titulo1" id="guardar" style="margin:20px ;  border: 3px solid #fff; border-radius:20px; padding:5px ; ">Guardar</a>
-                    </div>
-            </div> 
 
             <div class="info">
                 <p class="titulo1">Otros datos</p>

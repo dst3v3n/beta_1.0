@@ -191,7 +191,7 @@ body{
     -moz-transform: skewY(5deg );
     -ms-transform: skewY(5deg );
     -o-transform: skewY(5deg );
-    
+
 }
 
 .barra .content .p1:hover{
@@ -367,4 +367,10 @@ body{
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

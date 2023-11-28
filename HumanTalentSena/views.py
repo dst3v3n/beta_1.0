@@ -9,11 +9,5 @@ def registro (request):
 def login(request):
     return render(request , 'login.html')
 
-def hoja_vida(request):
-    return render(request , 'hoja_vida.html')
-
 def admministrar(request):
     return (request , admin.site.urls)
-
-def persil_user(request):
-    return render(request , 'perfiluser.html')
