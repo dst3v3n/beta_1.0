@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
-    'perfil_user.apps.PerfilUserConfig',
-    'empresa.apps.EmpresaConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -131,11 +129,6 @@ STATICFILES_DIRS=['HumanTalentSena/static']
 MEDIA_ROOT=BASE_DIR / 'media'
 MEDIA_URL='/media/'
 
-FOTOS_ROOT = BASE_DIR/ 'fotos'
-FOTOS_URL='/fotos/'
-
-FONDOS_ROOT = BASE_DIR/ 'fondos'
-FONDOS_URL='/fondos/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

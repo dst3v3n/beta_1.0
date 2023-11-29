@@ -17,7 +17,6 @@ def verificacion (request):
         email = request.POST['username']
         password = request.POST['password']
         verificacion = Usuario.objects.filter(Email = email).values  ()
-        print(verificacion)
         try:
             if len(verificacion) > 0:
                 for user in verificacion:

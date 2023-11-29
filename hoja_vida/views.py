@@ -60,8 +60,6 @@ def guardar_educacion (request):
                 info = Educacion (Archivo = request.FILES.getlist('Archivo')[i] , Nombre_Instituto = request.POST.getlist('Nombre_Instituto')[i] , Ano_graduacion = request.POST.getlist('Ano_graduacion')[i] , Tiempo = request.POST.getlist('Tiempo')[i] , Usuario_id = request.COOKIES.get('User_id'))
                 info.save()
             return redirect ('index_hoja')
-        # else:
-            
 
 def visualizar_hoja (request):
 
