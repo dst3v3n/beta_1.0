@@ -45,18 +45,17 @@
                             <button type="button" class="boton-avatar">
                                 <i class="far fa-image"></i>
                             </button>
-                        </div>
                             {%endfor%}
-                            {%for foto in get_foto%}
-                            <img src="{{foto.Foto_perfil.url}}" alt="img-avatar">
-                            <button type="button" class="boton-avatar">
-                                <i class="far fa-image"></i>
+                        </div>
+                        <div>
+                            {%for fondos in get_fondo%}
+                            <img src="{{fondos.Fondo.url}}" alt="img-avatar">
+                            <button type="button" class="boton-portada">
+                                <i class="far fa-image"></i> Cambiar fondo
                             </button>
                         </div>
+                        </div>
                             {%endfor%}
-                        <button type="button" class="boton-portada">
-                            <i class="far fa-image"></i> Cambiar fondo
-                        </button>
                     </div>
                 </div>
                 <div class="perfil-usuario-body">
