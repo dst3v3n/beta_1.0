@@ -17,6 +17,7 @@ def verificacion (request):
         email = request.POST['username']
         password = request.POST['password']
         verificacion = Usuario.objects.filter(Email = email).values  ()
+        print(verificacion)
         try:
             if len(verificacion) > 0:
                 for user in verificacion:
@@ -35,8 +36,8 @@ def verificacion (request):
                     response.set_cookie ('Email' , email , secure=True , httponly=True , samesite='None')
                     response.set_cookie ('Login_status' , True , secure=True , httponly=True , samesite='None')
                     return response
-            else:
-                return verificacion_admin (request , email , password)
+                else:
+                    return verificacion_admin (request , email , password)
         except:
             return redirect ('registro')
 
