@@ -47,20 +47,20 @@
                             </button>
                             {%endfor%}
                         </div>
-                        <div>
+                        
                             {%for fondos in get_fondo%}
                             <img src="{{fondos.Fondo.url}}" alt="img-avatar">
                             <button type="button" class="boton-portada">
                                 <i class="far fa-image"></i> Cambiar fondo
                             </button>
-                        </div>
+                        
                         </div>
                             {%endfor%}
                     </div>
                 </div>
                 <div class="perfil-usuario-body">
                     <div class="perfil-usuario-bio">
-                        <h3 class="titulo">Nombre del usuario: {{ Usuario.Nombre}},{{ Usuario.Apellido }}</h3>
+                        <h3 class="titulo">Nombre del usuario: {{ Usuario.Nombre}}{{ Usuario.Apellido }}</h3>
                     </div>
                     <div class="perfil-usuario-footer">
                         <ul class="lista-datos">
@@ -73,7 +73,7 @@
                             <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion: {{ Ubicacion}}</li>
                             <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento: {{ Fecha_nacimiento}}</li>
                             <li><i class="icono fas fa-user-check"></i> Registro: {{ Registro}}</li>
-                            <li><i class="icono fas fa-share-alt"></i> Redes sociales: {{Redes-sociales}}</li>
+                            <li><i class="icono fas fa-share-alt"></i> Redes sociales: {{Redes_sociales}}</li>
                         </ul>
                     </div>
                     <div class="redes-sociales">
