@@ -17,8 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from . import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +28,4 @@ urlpatterns = [
     path('usuarios/' , include('usuarios.urls')),
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
-]+static(settings.FOTOS_URL, document_root=settings.FOTOS_ROOT), +static(settings.FONDOS_URL, document_root=settings.FONDOS_ROOT)
+]

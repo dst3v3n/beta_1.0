@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'empresa.apps.EmpresaConfig',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -126,8 +128,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT= BASE_DIR
 STATICFILES_DIRS=['HumanTalentSena/static']
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'Archivo_Educacion')
+MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_URL='/media/'
 
 FOTOS_ROOT = BASE_DIR/ 'fotos'
 FOTOS_URL='/fotos/'

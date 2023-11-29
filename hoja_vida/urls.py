@@ -8,7 +8,6 @@ urlpatterns = [
     path('index/educacion', views.guardar_educacion , name='save_educacion'),
     path('visualizar', views.visualizar_hoja , name='visualizar_hoja'),
 ]
-
 if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
-                            document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
