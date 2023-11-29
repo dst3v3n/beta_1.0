@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
     'empresa.apps.EmpresaConfig',
-    'perfil_user.apps.PerfilUserConfig'
+    'perfil_user.apps.PerfilUserConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
