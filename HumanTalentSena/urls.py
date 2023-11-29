@@ -30,8 +30,9 @@ urlpatterns = [
     path('usuarios/' , include('usuarios.urls')),
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
+    path('empresa/' , include('empresa.urls')),
 ]
 
-if settings.DEBUG: 
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

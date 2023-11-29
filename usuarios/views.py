@@ -1,5 +1,6 @@
 from django.shortcuts import render , redirect
 from . models import Usuario
+from .forms import FormularioUsario
 from administradores.views import verificacion_admin
 from HumanTalentSena.static.python.encriptar import encriptar
 # Create your views here.
@@ -42,13 +43,16 @@ def verificacion (request):
 
 def metodo_post (request):
     if request.method == "POST":
-        nombre = request.POST['nombre']
-        apellido = request.POST['apellido']
-        email = request.POST['email']
-        password = request.POST['password']
-        password = encriptar (password)
-        Usuario(Nombre = nombre , Apellido = apellido , Email = email , Password = password).save ()
-        return render(request , 'login.html')
+        password = request.POST['Password']
+        re_password = request.POST['re_password']
+        if password == re_password:
+            password = encriptar (password)
+            new_usuario = FormularioUsario (request.POST)
+            if new_usuario.is_valid ():
+                info = new_usuario.save (commit=False)
+                info.Password = password
+                info.save ()
+                return redirect ('login')
     else:
         return (request , 'registro.html')
 
