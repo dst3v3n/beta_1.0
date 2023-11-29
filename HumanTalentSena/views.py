@@ -1,6 +1,8 @@
 from django.shortcuts import render , redirect
 from django.contrib import admin
-from django.http import HttpResponse
+from usuarios.forms import FormularioUsario
+from empresa.forms import FormularioEmpresa
+
 def index (request):
     data = {
         'boton': botones(request),
@@ -9,7 +11,11 @@ def index (request):
     return render(request , 'index.html' , data)
 
 def registro (request):
-    return render(request , 'registro.html')
+    data = {
+        'Form_Usuario' : FormularioUsario ,
+        'Form_Empresa' : FormularioEmpresa ,
+    }
+    return render(request , 'registro.html' , data)
 
 def login(request):
     return render(request , 'login.html')

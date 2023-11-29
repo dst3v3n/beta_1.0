@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
+    'empresa.apps.EmpresaConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
