@@ -35,8 +35,8 @@ def verificacion (request):
                     response.set_cookie ('Email' , email , secure=True , httponly=True , samesite='None')
                     response.set_cookie ('Login_status' , True , secure=True , httponly=True , samesite='None')
                     return response
-            else:
-                return verificacion_admin (request , email , password)
+                else:
+                    return verificacion_admin (request , email , password)
         except:
             return redirect ('registro')
 

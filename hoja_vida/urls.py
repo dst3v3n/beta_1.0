@@ -11,10 +11,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
-    
-if settings.DEBUG:
-        urlpatterns += static(settings.FOTOS_URL,
-                            document_root=settings.FOTOS_ROOT)
-if settings.DEBUG:
-        urlpatterns += static(settings.FONDOS_URL,
-                            document_root=settings.FONDOS_ROOT)
