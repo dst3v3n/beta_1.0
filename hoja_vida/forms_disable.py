@@ -10,28 +10,38 @@ class Form_Disable_Info_Person (forms.ModelForm):
         fields = '__all__'
         widgets = {
             'Nombre': forms.TextInput(attrs={'class': 'inp',
-                                             'disabled' : True
+                                             'readonly' :True
                                              }),
             'Apellido': forms.TextInput(attrs={'class': 'inp',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Direccion': forms.TextInput(attrs={'class': 'inp',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Celular' : forms.NumberInput (attrs={'class': 'inp1',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Email' : forms.EmailInput (attrs={'class': 'inp',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Fecha' : Date (attrs={'class': 'inp2',
-                                   'disabled' : True}),
+                                   'readonly' :True
+                                   }),
             'Tipod': forms.Select(attrs={'class': 'inp2',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'N_documento' : forms.NumberInput (attrs={'class': 'inp1',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Genero': forms.Select(attrs={'class': 'inp2',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Edad': forms.NumberInput(attrs={'class': 'inp1',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Civil': forms.Select(attrs={'class': 'inp2',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
         }
 
 class Form_Disable_educacion (forms.ModelForm):
@@ -42,14 +52,18 @@ class Form_Disable_educacion (forms.ModelForm):
             'Archivo' : forms.FileInput (attrs={'class': 'inp3',
                                                 'accept' : '.pdf',
                                                 'id' : 'img',
-                                                'disabled' : True
+                                                'readonly' :True
+
                                                 }),
             'Nombre_Instituto' : forms.TextInput (attrs={'class' : 'inp',
-                                                         'disabled' : True}),
+                                                         'readonly' :True
+                                                         }),
             'Ano_graduacion' : Date (attrs={'class': 'inp2',
-                                            'disabled' : True}),
+                                            'readonly' :True
+                                            }),
             'Tiempo' : forms.NumberInput (attrs= {'class' : 'inp1',
-                                                  'disabled' : True}),
+                                                  'readonly' :True
+                                                  }),
         }
 
 class Form_Disable_Empresa (forms.ModelForm):
@@ -58,15 +72,20 @@ class Form_Disable_Empresa (forms.ModelForm):
         fields = '__all__'
         widgets = {
             'Nombre_empresa' : forms.TextInput (attrs={'class': 'inp',
-                                                        'disabled' : True}),
+                                                        'readonly' :True
+                                                        }),
             'Cargo' : forms.TextInput (attrs={'class' : 'inp',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Fecha_Inicio' : Date (attrs={'class': 'inp2',
-                                          'disabled' : True}),
+                                          'readonly' :True
+                                          }),
             'Fecha_Finalizacion' : Date (attrs={'class': 'inp2',
-                                                'disabled' : True}),
+                                                'readonly' :True
+                                                }),
             'Funciones' : forms.Textarea (attrs= {'id' : 'dsr',
-                                                  'disabled' : True}),
+                                                  'readonly' :True
+                                                  }),
         }
 
 class Form_Disable_Refe_Person (forms.ModelForm):
@@ -75,15 +94,20 @@ class Form_Disable_Refe_Person (forms.ModelForm):
         fields = '__all__'
         widgets = {
             'Nombre_person' : forms.TextInput (attrs={'class': 'inp',
-                                                      'disabled' : True}),
+                                                      'readonly' :True
+                                                      }),
             'Apellido_person' : forms.TextInput (attrs={'class' : 'inp',
-                                                        'disabled' : True}),
+                                                        'readonly' :True
+                                                        }),
             'Direccion' : forms.TextInput (attrs={'class' : 'inp',
-                                                  'disabled' : True}),
+                                                  'readonly' :True
+                                                  }),
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1',
-                                                    'disabled' : True}),
+                                                    'readonly' :True
+                                                    }),
             'Inforamcion_adi' : forms.Textarea (attrs= {'id' : 'infoa',
-                                                        'disabled' : True}),
+                                                        'readonly' :True
+                                                        }),
         }
 
 class Form_Disable_Refe_Empresarial (forms.ModelForm):
@@ -92,11 +116,15 @@ class Form_Disable_Refe_Empresarial (forms.ModelForm):
         fields = '__all__'
         widgets = {
             'Nombre_Empresa' : forms.TextInput (attrs={'class': 'inp',
-                                                       'disabled' : True}),
+                                                       'readonly' :True
+                                                       }),
             'Nombre_Jefe' : forms.TextInput (attrs={'class' : 'inp',
-                                                    'disabled' : True}),
+                                                    'readonly' :True
+                                                    }),
             'Direccion' : forms.TextInput (attrs={'class' : 'inp',
-                                                  'disabled' : True}),
+                                                  'readonly' :True
+                                                  }),
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1',
-                                                    'disabled' : True}),
+                                                    'readonly' :True
+                                                    }),
         }

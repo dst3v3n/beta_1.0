@@ -14,6 +14,9 @@ def registro (request):
 def login(request):
     return render(request , 'login.html')
 
+def busqueda(request):
+    return render(request , 'busqueda.html')
+
 def admministrar(request):
     return (request , admin.site.urls)
 

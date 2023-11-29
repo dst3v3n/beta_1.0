@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,12 +123,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT= BASE_DIR 
+STATIC_ROOT= BASE_DIR
 STATICFILES_DIRS=['HumanTalentSena/static']
+
+MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_URL='/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-APPEND_SLASH = False 
+APPEND_SLASH = False
 ### Cuando esta en verdadero pone un shell al final de la url y cuando esta en falso, no pone la shell al final y hace redireccionamientos de url ###
