@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro admin</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
-    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registro1.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
 <body class="hidden">
@@ -15,7 +14,7 @@
 		<div class="cssload-loader">HUMAN TALENT</div>
 	</div>
     <main class="form">
-        <form action="{% url 'datos_admin' %}" class="sub-form" id="form" method="post"> {% csrf_token %}
+        <form action="{% url 'datos_admin' %}" class="sub-form" id="form" method="post"> {% csrf_token %}   
             <!-- {% csrf_token %} da un valor aleatorio y unico que se genera por el servidor y se almacena en el navegador del usuario. -->
             <div class="upper-form">
                 <div class="cabecera">

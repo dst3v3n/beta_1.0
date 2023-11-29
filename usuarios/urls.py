@@ -7,4 +7,5 @@ urlpatterns = [
     path('datos/' , views.metodo_post , name='datos'),
     path('perfil/' , views.perfil_user , name="perfil_user"),
     path('acceso/', views.verificacion , name="verificacion"),
+    path('cerrar_sesion/', views.cerrar_sesion , name="cerrar"),
 ]

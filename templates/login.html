@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body class="hidden">
-    <div class="centrado" id="onload">	
+    <div class="centrado" id="onload">
 		<div class="cssload-loader">HUMAN TALENT</div>
 	</div>
     <main class="form">
-        <form action="{% url 'verificacion' %}" class="sub-form" method="post">  {% csrf_token %}
+        <form action="{% url 'verificacion' %}" class="sub-form" method="post">
+            {% csrf_token %}
             <div class="upper-form">
                 <div class="cabecera">
                     <a href="{%url 'index'%}" class="atras">
