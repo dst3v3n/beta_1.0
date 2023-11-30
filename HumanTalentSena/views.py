@@ -39,3 +39,11 @@ def barra (request):
             return True
     except:
         return False
+
+def cerrar_sesion (request):
+    response = redirect('index')
+    response.delete_cookie('User_id')
+    response.delete_cookie('tipo_usuario')
+    response.delete_cookie('Email')
+    response.delete_cookie('Login_status')
+    return response

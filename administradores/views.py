@@ -63,19 +63,17 @@ def  usuariosedit(request):
 
 def verificacion_admin (request , email , password):
     verificacion = Admin.objects.filter(Email = email).values ()
+    print(verificacion)
     for user in verificacion:
         Email = user['Email']
         passwd = user['Password']
         user_id = user ['id']
     password = encriptar (password)
     if Email == email and passwd == password:
-        context = {
-                    'email' : Email ,
-                    'login_status' : True
-                }
-        response = render (request , 'admin_index.html' , context)
+        response = redirect ('admin_index')
         response.set_cookie ('User_id' , user_id , secure=True , httponly=True , samesite='None')
         response.set_cookie ('Email' , email , secure=True , httponly=True , samesite='None')
+        response.set_cookie ('tipo_usuario' , 'Admin' , secure=True , httponly=True , samesite='None')
         response.set_cookie ('Login_status' , True , secure=True , httponly=True , samesite='None')
         return response
     else:

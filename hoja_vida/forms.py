@@ -1,6 +1,5 @@
 from django import forms
-from . models import Informacion_Person , Educacion , Empresa , Refe_personales , Refe_empresarial
-from random import randint
+from . models import Informacion_Person , Educacion , Empresa , Refe_personales , Refe_empresarial , Informacion_Adicional
 
 class Date (forms.DateInput):
     input_type = 'date'
@@ -25,13 +24,13 @@ class Form_Info_Person (forms.ModelForm):
 
 class Form_educacion (forms.ModelForm):
     class Meta:
-        numero = randint(1 , 10)
         model = Educacion
         fields = ['Archivo' , 'Nombre_Instituto' , 'Ano_graduacion' , 'Tiempo']
         widgets = {
             'Archivo' : forms.FileInput (attrs={'class': 'inp3',
                                                 'accept' : '.pdf',
                                                 'id' : 'img',
+                                                'required' : False
                                                 }),
             'Nombre_Instituto' : forms.TextInput (attrs={'class' : 'inp'}),
             'Ano_graduacion' : Date (attrs={'class': 'inp2'}),
@@ -41,7 +40,7 @@ class Form_educacion (forms.ModelForm):
 class Form_Empresa (forms.ModelForm):
     class Meta:
         model = Empresa
-        fields = '__all__'
+        fields = ['Nombre_empresa' , 'Cargo' , 'Fecha_Inicio' , 'Fecha_Finalizacion' , 'Funciones']
         widgets = {
             'Nombre_empresa' : forms.TextInput (attrs={'class': 'inp',}),
             'Cargo' : forms.TextInput (attrs={'class' : 'inp'}),
@@ -53,13 +52,12 @@ class Form_Empresa (forms.ModelForm):
 class Form_Refe_Person (forms.ModelForm):
     class Meta:
         model = Refe_personales
-        fields = '__all__'
+        fields = ['Nombre_person' , 'Apellido_person' , 'Direccion' , 'N_celular']
         widgets = {
             'Nombre_person' : forms.TextInput (attrs={'class': 'inp',}),
             'Apellido_person' : forms.TextInput (attrs={'class' : 'inp'}),
             'Direccion' : forms.TextInput (attrs={'class' : 'inp'}),
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1'}),
-            'Inforamcion_adi' : forms.Textarea (attrs= {'id' : 'infoa'}),
         }
 
 class Form_Refe_Empresarial (forms.ModelForm):
@@ -71,4 +69,12 @@ class Form_Refe_Empresarial (forms.ModelForm):
             'Nombre_Jefe' : forms.TextInput (attrs={'class' : 'inp'}),
             'Direccion' : forms.TextInput (attrs={'class' : 'inp'}),
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1'}),
+        }
+
+class Form_Adicional (forms.ModelForm):
+    class Meta:
+        model= Informacion_Adicional
+        fields = ['Inforamcion_adi']
+        widgets = {
+            'Inforamcion_adi' : forms.Textarea (attrs= {'id' : 'infoa'}),
         }
