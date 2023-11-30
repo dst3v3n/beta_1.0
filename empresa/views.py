@@ -33,7 +33,7 @@ def verificacion_empresa (request , email , password):
             response = redirect ('index')
             response.set_cookie ('User_id' , user_id , secure=True , httponly=True , samesite='None')
             response.set_cookie ('Email' , email , secure=True , httponly=True , samesite='None')
-            response.set_cookie ('tipo_usuario' , 'Empresa' , secure=True , httponly=True , samesite='None')
+            response.set_cookie ('type_user' , 'Empresa' , secure=True , httponly=True , samesite='None')
             response.set_cookie ('Login_status' , True , secure=True , httponly=True , samesite='None')
             return response
     else:

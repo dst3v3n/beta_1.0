@@ -63,9 +63,14 @@
 					<a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
 				</div>
 				<div class="icon">
-					<a href="#" class="fa fa-share"></a>
-					<a href="{%url 'busqueda'%}" class="fa fa-search"></a>
-					<a href="#" class="fa fa-bookmark"></a>
+                    {% if empresa %}
+                        <a href="#" class="fa fa-share"></a>
+                        <a href="#" class="fa fa-bookmark"></a>
+                    {% else %}
+                        <a href="#" class="fa fa-share"></a>
+                        <a href="{%url 'busqueda'%}" class="fa fa-search"></a>
+                        <a href="#" class="fa fa-bookmark"></a>
+                    {% endif %}
 				</div>
 			</div>
 		</section>
