@@ -211,5 +211,132 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="/static/js/loader.js"></script>
+
+        <script>
+            const contenedor = document.querySelector('#edu');
+            const btnAgregar = document.querySelector('#agregar');
+
+            // Counter variable
+            let total = 1;
+
+            // Function to add new form
+            btnAgregar.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const newForm = document.createElement('div');
+            newForm.innerHTML = `
+                <p class="titulo2">Institución</p>
+                <label for="titulo" class="infop">Titulo obtenido</label>
+                {{form_edu_in.Archivo }}
+                <label for="cole" class="infop" id="col">Institución</label>
+                {{form_edu_in.Nombre_Instituto}}
+                <br>
+                <br>
+                <label for="añ" class="infop">Año de gradución</label>
+                {{form_edu_in.Ano_graduacion}}
+                <label for="tim" class="infop" id="tie">timpo en la institucion</label>
+                {{form_edu_in.Tiempo}}
+                <br>
+                <br>
+                <br>
+                </form>
+                <button onclick="eliminar(this)"style="
+                background-color: red;
+                border-color: black;
+                border-radius: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                ">Eliminar</button>
+            `;
+
+            contenedor.appendChild(newForm);
+            });
+
+            // Function to remove form
+            function eliminar(element) {
+            const parentNode = element.parentNode;
+            contenedor.removeChild(parentNode);
+            actualizarContador();
+            };
+
+            // Function to update counter
+            function actualizarContador() {
+            const forms = contenedor.children;
+            total = 1;
+
+            for (let i = 0; i < forms.length; i++) {
+                forms[i].children.innerHTML = total++;
+            }
+            };
+
+        </script>
+
+        <script>
+            const contenedor1 = document.querySelector('#edu1');
+            const btnAgregar1 = document.querySelector('#agregar1');
+
+            // Counter variable
+            let total1 = 1;
+
+            // Function to add new form
+            btnAgregar1.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const newForm = document.createElement('div');
+            newForm.innerHTML = `
+            <p class="titulo2">Empresa</p>
+            <label for="emp" class="infop">Empresa</label>
+            {{form_empresa_in.Nombre_empresa}}
+            <label for="car" class="infop" id="car">Cargo</label>
+            {{form_empresa_in.Cargo}}
+            <br>
+            <br>
+            <label for="fechai" class="infop">Fecha de inicio</label>
+            {{form_empresa_in.Fecha_Inicio}}
+            <label for="fechaf" class="infop">Fecha de FInalización</label>
+            {{form_empresa_in.Fecha_Finalizacion}}
+            <br>
+            <br>
+            <label for="dsr" class="infop">Describa sus fuciones</label>
+            {{form_empresa_in.Funciones}}
+            <br>
+            <br>
+            <br>
+            <button onclick="eliminar1(this)" style="
+                background-color: red;
+                border-color: black;
+                border-radius: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                ">Eliminar</button>
+            `;
+
+            contenedor1.appendChild(newForm);
+            });
+
+            // Function to remove form
+            function eliminar1(element) {
+            const parentNode = element.parentNode;
+            contenedor1.removeChild(parentNode);
+            actualizarContador();
+            };
+
+            // Function to update counter
+            function actualizarContador() {
+            const forms = contenedor1.children;
+            total1 = 1;
+
+            for (let i = 0; i < forms.length; i++) {
+                forms[i].children.innerHTML = total++;
+            }
+            };
+
+        </script>
     </main>
 </body>

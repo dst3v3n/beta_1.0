@@ -65,15 +65,18 @@ def hoja_vida (request):
 
     form_empresa = Form_Empresa ()
     form_educacion = Form_educacion ()
-    return render (request , 'hoja_vida.html' , {'form_info' : form_info_instance,
-                                                 'form_edu' : list_educacion,
-                                                 'form_empresa' : list_empresa,
-                                                 'form_person' : list_personales,
-                                                 'form_empresarial' : list_empresariales,
-                                                 'form_adicio' : form_adicio_instance,
-                                                 'form_edu_in' : form_educacion,
-                                                 'form_empresa_in' : form_empresa,
-                                                 })
+
+    data =  {'form_info' : form_info_instance,
+             'form_edu' : list_educacion,
+             'form_empresa' : list_empresa,
+             'form_person' : list_personales,
+             'form_empresarial' : list_empresariales,
+             'form_adicio' : form_adicio_instance,
+             'form_edu_in' : form_educacion,
+             'form_empresa_in' : form_empresa,
+             }
+
+    return render (request , 'hoja_vida.html' ,data)
 
 def guardar_info (request):
     if request.method == 'POST':
@@ -205,11 +208,12 @@ def visualizar_hoja (request):
             form_personales = Form_Disable_Refe_Empresarial ()
             list_empresariales.append (form_personales)
 
+    data =  {'form_info' : form_info_instance,
+             'form_edu' : list_educacion,
+             'form_empresa' : list_empresa,
+             'form_person' : list_personales,
+             'form_empresarial' : list_empresariales,
+             'form_adicio' : form_adicio_instance,
+             }
 
-    return render (request , 'hoja_vida_visualizar.html' , {'form_info' : form_info_instance,
-                                                 'form_edu' : list_educacion,
-                                                 'form_empresa' : list_empresa,
-                                                 'form_person' : list_personales,
-                                                 'form_empresarial' : list_empresariales,
-                                                 'form_adicio' : form_adicio_instance,
-                                                 })
+    return render (request , 'hoja_vida_visualizar.html' , data)
