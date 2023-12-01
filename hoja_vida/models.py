@@ -1,5 +1,5 @@
 from django.db import models
-from .selects import Informacion_Per
+from . selects import Informacion_Per
 from usuarios.models import Usuario
 
 # Create your models here.
@@ -33,7 +33,7 @@ class Empresa (models.Model):
     Cargo = models.CharField (max_length = 50)
     Fecha_Inicio = models.DateField ()
     Fecha_Finalizacion = models.DateField ()
-    Funciones = models.TextField ()
+    Funciones = models.TextField (null=True , blank=True)
     Usuario = models.ForeignKey (Usuario , null=True , on_delete=models.CASCADE)
 
 class Refe_personales (models.Model):
@@ -41,7 +41,6 @@ class Refe_personales (models.Model):
     Apellido_person = models.CharField (max_length = 50)
     Direccion = models.CharField (max_length = 50)
     N_celular = models.IntegerField ()
-    Inforamcion_adi = models.TextField ()
     Usuario = models.ForeignKey (Usuario , null=True , on_delete=models.CASCADE)
 
 class Refe_empresarial (models.Model):
@@ -49,4 +48,8 @@ class Refe_empresarial (models.Model):
     Nombre_Jefe = models.CharField (max_length = 50)
     Direccion = models.CharField (max_length = 50)
     N_celular = models.IntegerField ()
+    Usuario = models.ForeignKey (Usuario , null=True , on_delete=models.CASCADE)
+
+class Informacion_Adicional (models.Model):
+    Inforamcion_adi = models.TextField ()
     Usuario = models.ForeignKey (Usuario , null=True , on_delete=models.CASCADE)

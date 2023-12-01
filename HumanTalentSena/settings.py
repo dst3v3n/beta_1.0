@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'administradores.apps.AdministradoresConfig',
     'hoja_vida.apps.HojaVidaConfig',
-    'perfil_user.apps.PerfilUserConfig',
     'empresa.apps.EmpresaConfig',
     'buscador.apps.buscadorconfig',
 ]
@@ -126,9 +125,17 @@ STATIC_URL = 'static/'
 STATIC_ROOT= BASE_DIR 
 STATICFILES_DIRS=['HumanTalentSena/static']
 
+MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_URL='/media/'
+
+FOTOS_ROOT = BASE_DIR/ 'fotos'
+FOTOS_URL='/fotos/'
+
+FONDOS_ROOT = BASE_DIR/ 'fondos'
+FONDOS_URL='/fondos/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-APPEND_SLASH = False 
+APPEND_SLASH = False
 ### Cuando esta en verdadero pone un shell al final de la url y cuando esta en falso, no pone la shell al final y hace redireccionamientos de url ###
