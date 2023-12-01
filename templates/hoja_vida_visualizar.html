@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="{%static 'css/vhoja_vida.css'%}">
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
+<style>
+    #guardar{
+        font-size: 20px;
+        position: fixed;
+        left: 94%;
+        cursor: pointer;
+        color: #fff;
+        background-color: #1D405C;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        padding: 5px;
 
+    }
+    #guardar:hover{
+        background-color: red;
+        border-color: red;
+
+    }
+</style>
 <body class="hidden">
     <div class="centrado" id="onload">
         <div class="cssload-loader">HUMAN TALENT</div>
@@ -185,6 +203,7 @@
 
 
         <dialog id="modal" class="info" style="width: auto;">
+            <button  id="guardar" >✖️</button>
             {% if veri_info %}
                 <div class="info">
                     <form action="{% url 'editar_info' %}" method="post">
@@ -508,33 +527,11 @@
                         {% endfor %}
                     </div>
                 {% endif %}
+                    <button  class="titulo1" id="guardar" style="margin: 2% 20px 0 0;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Cerrar</button>
 
+            </dialog>
 
-            {% if veri_adicio %}
-                <div class="info">
-                    <form action="{% url 'ediar_adicional' %}" method="post">
-                        {% csrf_token %}
-                        <p class="titulo1">Informacion adicional</p>
-                        <br>
-                        {{form_adicion_adicio.Inforamcion_adi}}
-                        <br>
-                        <br>
-                        <p class="titulo2">No olvide guardar sus datos </p>
-                        <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                        <a href="{% url 'eliminar_adicional' %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
-                    </form>
-                </div>
-            {% else %}
-                <div class="info">
-                    <p class="titulo1">Informacion adicional</p>
-                    <br>
-                    {{form_adicio.Inforamcion_adi}}
-                    <br>
-                    <br>
-                </div>
-            {% endif %}
-        </dialog>
-    </main>
+        </main>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="/static/js/loader.js"></script>
         <script src="/static/js/modal.js"></script>
