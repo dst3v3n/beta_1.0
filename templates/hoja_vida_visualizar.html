@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="{%static 'css/vhoja_vida.css'%}">
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
+<style>
+    #guardar{
+        font-size: 20px;
+        position: fixed;
+        left: 92%; 
+        cursor: pointer; 
+        color: #fff; 
+        background-color: #1D405C; 
+        border: 3px solid #fff; 
+        border-radius: 50%; 
+        padding: 5px;
+    
+    }
+    #guardar:hover{
+        background-color: red;
+        border-color: red;
 
+    }
+</style>
 <body class="hidden">
     <div class="centrado" id="onload">
         <div class="cssload-loader">HUMAN TALENT</div>
@@ -193,9 +211,10 @@
                     <br>
                 </form>
             </div>
-
+            
             <dialog id="modal" class="info" style="width: auto;">
-
+                <button  id="guardar" >✖️</button>
+                
                 <div class="info" style="width: auto;">
                         {% csrf_token %}
                         <p class="titulo1">Información Personal</p>
@@ -371,7 +390,6 @@
                         </form>
                     </div>
         
-                    <button  class="titulo1" id="guardar" style="margin: 2% 20px 0 0;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Cerrar</button>
         
             </dialog>
 
