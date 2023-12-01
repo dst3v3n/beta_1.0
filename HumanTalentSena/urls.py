@@ -31,9 +31,11 @@ urlpatterns = [
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
     path('perfil/' , include('perfil_user.urls')),
+    path('empresa/' , include('empresa.urls')),
+    path('cerrar_sesion/', views.cerrar_sesion , name="cerrar"),
 ]
 
-if settings.DEBUG: 
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
