@@ -235,7 +235,7 @@
                         {{form_adicion_info.Tipod}}
 
 
-                        <label for="ncc" class="infop" id="doc">Nº de documento</label>
+                        <label for="ncc" class="infop" id="doc">Nºdocumento</label>
                         {{form_info.N_documento}}
                         <br>
                         <br>
@@ -244,14 +244,15 @@
 
                         <label for="edad" class="infop" id="ed">Edad</label>
                         {{form_info.Edad}}
-
+                        <br>
+                        <br>
                         <label for="civil" class="infop" id="estado">Estado civil</label>
                         {{form_info.Civil}}
                         <br>
                         <br>
                         <p class="titulo2">No olvide guardar sus datos </p>
-                        <button  class="titulo1" id="open" type="submit" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                        <a href="{% url 'eliminar_info' %}" class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;" >Eliminar</a>
+                        <button  class="titulo1" id="open" type="submit" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                        <a href="{% url 'eliminar_info' %}" class="titulo1" id="open" style="margin: 2% 0 0 4%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;" >Eliminar</a>
                     </form>
                 </div>
             {% else %}
@@ -324,8 +325,8 @@
                                 <br>
                                 <div>
                                     <p class="titulo2">No olvide guardar sus datos </p>
-                                    <button class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                                    <a href="{% url 'eliminar_educacion' form.instance.id %}" class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                                    <button class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                                    <a href="{% url 'eliminar_educacion' form.instance.id %}" class="titulo1" id="open" style="margin: 2% 0 0 4%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
                                 </div>
                             </form>
                         {% endfor %}
@@ -387,8 +388,8 @@
                                 <br>
                                 <div>
                                     <p class="titulo2">No olvide guardar sus datos </p>
-                                    <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                                    <a href="{% url 'eliminar_empresa' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                                    <button  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                                    <a href="{% url 'eliminar_empresa' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
                                 </div>
                             </form>
                         {% endfor %}
@@ -446,8 +447,8 @@
                             <label for="cel" class="infop">Nºcelular</label>
                             {{form.N_celular}}
                             <br>
-                            <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                            <a href="{% url 'eliminar_referencias_personales' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                            <button  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                            <a href="{% url 'eliminar_referencias_personales' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
                         </form>
                         {% endfor %}
                     </div>
@@ -498,8 +499,8 @@
                                 <label for="tel" class="infop" id="telf">Nºtelefono</label>
                                 {{form.N_celular}}
                                 <br>
-                                <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                                <a href="{% url 'eliminar_referencias_empresariales' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                                <button  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                                <a href="{% url 'eliminar_referencias_empresariales' form.instance.id %}"  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
                             </form>
                         {% endfor %}
                     </div>
