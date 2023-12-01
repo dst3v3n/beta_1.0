@@ -527,7 +527,30 @@
                         {% endfor %}
                     </div>
                 {% endif %}
-                    <button  class="titulo1" id="guardar" style="margin: 2% 20px 0 0;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Cerrar</button>
+
+                {% if veri_adicio %}
+                <div class="info">
+                        <form action="{% url 'ediar_adicional' %}" method="post">
+                        {% csrf_token %}
+                        <p class="titulo1">Informacion adicional</p>
+                        <br>
+                        {{form_adicion_adicio.Inforamcion_adi}}
+                        <br>
+                        <br>
+                        <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                        <a href="{% url 'eliminar_adicional' %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                    </div>
+                {% else %}
+                    <div class="info">
+                        <p class="titulo1">Informacion adicional</p>
+                        <br>
+                        {{form_adicio.Inforamcion_adi}}
+                        <br>
+                        <br>
+                    </div>
+                {% endif %}
+
+                <button  class="titulo1" id="guardar" style="margin: 2% 20px 0 0;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Cerrar</button>
 
             </dialog>
 
