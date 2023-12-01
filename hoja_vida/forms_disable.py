@@ -126,7 +126,7 @@ class Form_Disable_Refe_Empresarial (forms.ModelForm):
                                                     }),
         }
 
-class Form_Disable_Form_Adicional (forms.ModelForm):
+class Form_Disable_Adicional (forms.ModelForm):
     class Meta:
         model = Informacion_Adicional
         fields = '__all__'

@@ -44,13 +44,16 @@
         <div class="cont-menu">
             <nav>
                 <a href="{%url 'perfil_user'%}">Perfil</a>
-                <a href="#">Empresas</a>
+                {% if empresa %}
                 <a href="#">Crear ofertas</a>
+                {% else %}
+                <a href="#">Empresas</a>
                 <a href="#">Mirar ofertas</a>
                 <a href="{%url 'index_hoja'%}">Crear hoja de vida</a>
                 <a href="{% url 'visualizar_hoja' %}">Ver y Editar hoja de vida</a>
                 <a href="#">Ofertas guardadas</a>
                 <a href="{% url 'cerrar' %}">Cerrar sesion</a>
+                {% endif %}
             </nav>
             <label for="btn-menu">✖️</label>
         </div>
@@ -65,14 +68,9 @@
 					<a href="{%url 'perfil_user'%}" class="fa fa-user"></a>
 				</div>
 				<div class="icon">
-                    {% if empresa %}
-                        <a href="#" class="fa fa-share"></a>
-                        <a href="#" class="fa fa-bookmark"></a>
-                    {% else %}
-                        <a href="#" class="fa fa-share"></a>
-                        <a href="{%url 'busqueda'%}" class="fa fa-search"></a>
-                        <a href="#" class="fa fa-bookmark"></a>
-                    {% endif %}
+                    <a href="#" class="fa fa-share"></a>
+                    <a href="{%url 'busqueda'%}" class="fa fa-search"></a>
+                    <a href="#" class="fa fa-bookmark"></a>
 				</div>
 			</div>
 		</section>

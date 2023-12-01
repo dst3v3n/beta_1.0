@@ -25,7 +25,7 @@ class Form_Info_Person (forms.ModelForm):
 class Form_educacion (forms.ModelForm):
     class Meta:
         model = Educacion
-        fields = ['Archivo' , 'Nombre_Instituto' , 'Ano_graduacion' , 'Tiempo']
+        fields = ['Archivo' , 'Nombre_Instituto' , 'Ano_graduacion' , 'Tiempo' , 'id']
         widgets = {
             'Archivo' : forms.FileInput (attrs={'class': 'inp3',
                                                 'accept' : '.pdf',
