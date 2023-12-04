@@ -1,5 +1,6 @@
 from django.shortcuts import render , redirect
 from . models import Usuario
+from empresa.models import Empresa
 from .forms import FormularioUsario
 from empresa.views import verificacion_empresa
 from HumanTalentSena.static.python.encriptar import encriptar
@@ -33,6 +34,7 @@ def verificacion (request):
                 return response
         else:
             return verificacion_empresa (request , email , password)
+
 def metodo_post (request):
     if request.method == "POST":
         password = request.POST['Password']
@@ -40,13 +42,16 @@ def metodo_post (request):
         if password == re_password:
             password = encriptar (password)
             new_usuario = FormularioUsario (request.POST)
-            if new_usuario.is_valid ():
-                info = new_usuario.save (commit=False)
-                info.Password = password
-                info.save ()
-                return redirect ('login')
-    else:
-        return (request , 'registro.html')
+            if len (Empresa.objects.filter (Email = request.POST.get("Email"))) <1 :
+                if new_usuario.is_valid ():
+                    info = new_usuario.save (commit=False)
+                    info.Password = password
+                    info.save ()
+                    return redirect ('login')
+                else:
+                    return redirect ('registro')
+            else:
+                return redirect ('registro')
 
 def perfil_user(request):
     return render(request , 'perfiluser.html')
