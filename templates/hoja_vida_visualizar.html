@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo.ico' %}">
 </head>
 <style>
-    #guardar{
+    #cancelar{
         font-size: 20px;
         position: fixed;
         left: 94%;
@@ -21,7 +21,7 @@
         padding: 5px;
 
     }
-    #guardar:hover{
+    #cancelar:hover{
         background-color: red;
         border-color: red;
 
@@ -203,7 +203,7 @@
 
 
         <dialog id="modal" class="info" style="width: auto;">
-            <button  id="guardar" >✖️</button>
+            <button  id="cancelar" >✖️</button>
             {% if veri_info %}
                 <div class="info">
                     <form action="{% url 'editar_info' %}" method="post">
@@ -405,12 +405,21 @@
                             <label for="emp" class="infop">Empresa</label>
                             {{form.Nombre_empresa}}
 
+<<<<<<< HEAD
+                <label for="cel" class="infop">Nºcelular</label>
+                {{form_person.N_celular}}
+                <br>
+                <br>
+                <br>
+                <p class="titulo2"> Referencias personales</p>
+=======
                             <label for="car" class="infop" id="car">Cargo</label>
                             {{form.Cargo}}
                             <br>
                             <br>
                             <label for="fechai" class="infop">Fecha de inicio</label>
                             {{form.Fecha_Inicio}}
+>>>>>>> a8b59e40387f108fe7fe8da6577ef93df8f8e8e0
 
                             <label for="fechaf" class="infop">Fecha de FInalización</label>
                             {{form.Fecha_Finalizacion}}
@@ -538,8 +547,8 @@
                         {{form_adicion_adicio.Inforamcion_adi}}
                         <br>
                         <br>
-                        <button  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
-                        <a href="{% url 'eliminar_adicional' %}"  class="titulo1" id="open" style="margin: 2% 0 0 45%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
+                        <button  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Guardar</button>
+                        <a href="{% url 'eliminar_adicional' %}"  class="titulo1" id="open" style="margin: 2% 0 0 2%;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Eliminar</a>
                     </div>
                 {% else %}
                     <div class="info">
@@ -550,8 +559,6 @@
                         <br>
                     </div>
                 {% endif %}
-
-                <button  class="titulo1" id="guardar" style="margin: 2% 20px 0 0;cursor: pointer; background-color: #1D405C; border: 3px solid #fff; border-radius: 20px; padding: 5px;">Cerrar</button>
 
             </dialog>
 
