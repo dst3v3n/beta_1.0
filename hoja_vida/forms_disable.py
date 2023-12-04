@@ -1,5 +1,5 @@
 from django import forms
-from . models import Informacion_Person , Educacion , Empresa , Refe_personales , Refe_empresarial
+from . models import Informacion_Person , Educacion , Empresa , Refe_personales , Refe_empresarial , Informacion_Adicional
 
 class Date (forms.DateInput):
     input_type = 'date'
@@ -105,9 +105,6 @@ class Form_Disable_Refe_Person (forms.ModelForm):
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1',
                                                     'readonly' :True
                                                     }),
-            'Inforamcion_adi' : forms.Textarea (attrs= {'id' : 'infoa',
-                                                        'readonly' :True
-                                                        }),
         }
 
 class Form_Disable_Refe_Empresarial (forms.ModelForm):
@@ -127,4 +124,14 @@ class Form_Disable_Refe_Empresarial (forms.ModelForm):
             'N_celular' : forms.NumberInput (attrs={'class': 'inp1',
                                                     'readonly' :True
                                                     }),
+        }
+
+class Form_Disable_Adicional (forms.ModelForm):
+    class Meta:
+        model = Informacion_Adicional
+        fields = '__all__'
+        widgets = {
+            'Inforamcion_adi' : forms.Textarea(attrs={'id' : 'infoa',
+                                                      'readonly' :True
+        })
         }
