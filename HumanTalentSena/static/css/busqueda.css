@@ -478,3 +478,20 @@ footer a {
     transform: scale(1.2);
     background-image: radial-gradient(circle at 87.5% 12.5%, #0090ff 0, #008cff 6.25%, #0086ff 12.5%, #0080ff 18.75%, #4779ff 25%, #7371fa 31.25%, #9268f0 37.5%, #aa5fe5 43.75%, #be55d8 50%, #ce4bca 56.25%, #dc40ba 62.5%, #e636aa 68.75%, #ee2d9a 75%, #f32789 81.25%, #f62678 87.5%, #f72a67 93.75%, #f63157 100%);
     }
+
+/*styls scroll*/
+
+body::-webkit-scrollbar {
+    width: 25px;   
+   
+}
+       
+body::-webkit-scrollbar-track {
+    border: 7px solid #232943;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.6) inset;
+}
+   
+body::-webkit-scrollbar-thumb {
+    background: #005B8F;
+    border-radius: 5px;
+}
