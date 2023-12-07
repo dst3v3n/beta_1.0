@@ -305,10 +305,8 @@ input:focus {
     transform: translate(420px,20px);
     font-size: 30px;
     cursor: pointer;
-    background-color: #171515;
     z-index: 1;
     height: 35px;
-    border-radius: 5px;
 
 }
 
@@ -317,10 +315,28 @@ input:focus {
     transform: translate(420px,20px);
     font-size: 30px;
     cursor: pointer;
-    background-color: #171515;
     z-index: 1;
     height: 35px;
-    border-radius: 5px;
+
+}
+
+.Eye2{
+    position: absolute;
+    transform: translate(420px,20px);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    height: 35px;
+
+}
+
+.Eye3{
+    position: absolute;
+    transform: translate(420px,20px);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+    height: 35px;
 
 }
 
