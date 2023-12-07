@@ -128,8 +128,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT= BASE_DIR
 STATICFILES_DIRS=['HumanTalentSena/static']
 
-MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_URL = '/media/'
+MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_URL='/media/'
 
 
 FOTOS_ROOT = BASE_DIR/ 'fotos'

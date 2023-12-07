@@ -31,8 +31,8 @@ urlpatterns = [
     path('admins/' , include('administradores.urls')),
     path('hoja_vida/' , include('hoja_vida.urls')),
     path('empresa/' , include('empresa.urls')),
-    path('cerrar_sesion/', views.cerrar_sesion , name="cerrar"),
     path('perfil/' , include('perfil_user.urls')),
+    path('cerrar_sesion/', views.cerrar_sesion , name="cerrar"),
 ]
 
 if settings.DEBUG:
