@@ -19,7 +19,7 @@ def metodo_post (request):
                 info.save ()
             return redirect('login')
     else:
-        return (request , 'registro.html')
+        return redirect ('registro')
 
 def verificacion_empresa (request , email , password):
     verificacion = Empresa.objects.filter(Email = email).values ()
